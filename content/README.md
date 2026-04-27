@@ -158,7 +158,7 @@ An array of species records. Add, remove, or reorder freely.
 | `imageCredit` | optional | Caption rendered over the bottom-right of the photo. |
 | `references` | optional | Array of `{source, label, url, n}`. Empty = a generic Purdue Extension stub. |
 
-The `range` field is read by the Indiana range map. Recognized phrases (case-insensitive): `statewide`, `northern`, `central`, `southern`. Anything else renders as a blank state.
+The `range` field appears in the species hero metadata grid as a one-line label (e.g. "Statewide", "Northern Indiana"). Plain prose is fine.
 
 ## Common tasks
 
@@ -189,5 +189,4 @@ Delete records from the JSON. Tile counts and group pages update on the next bui
 
 ## Caveats
 
-- **Range maps** are coarse, drawn from publicly available occurrence data. The species page carries an italic disclaimer reminding readers that public-data ranges often mismatch real-world distributions — do not remove that disclaimer.
 - The site rebuilds on every push to the default branch — Vercel handles this automatically. If a deploy fails, check Vercel's build logs (most failures will be a malformed JSON file or a missing `groups.json` / `species/<groupId>.json`).

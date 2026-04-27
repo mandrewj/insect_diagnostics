@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import IndianaMap from "@/app/components/IndianaMap";
 import Plate from "@/app/components/Plate";
 import SpeciesNav from "@/app/components/SpeciesNav";
 import { getProjectBundle, getProjects, getSpecies } from "@/lib/data";
+
+const PPDL_URL = "https://ag.purdue.edu/department/btny/ppdl/";
 
 export async function generateStaticParams() {
   const projects = await getProjects();
@@ -53,28 +54,14 @@ export default async function SpeciesPage({ params }) {
     })
     .filter(Boolean);
 
-  const refs =
-    species.references && species.references.length > 0
-      ? species.references.map((r) => ({
-          source: r.source || "Reference",
-          title: r.label || r.title || r.url,
-          url: r.url || "#",
-          n: r.n || "",
-        }))
-      : [
-          {
-            source: "Purdue Extension",
-            url: "#",
-            title: `${species.common} (${species.scientific}): identification and management`,
-            n: "E-227-W",
-          },
-          {
-            source: "Purdue PPDL",
-            url: "#",
-            title: `Indoor pest fact sheet: ${species.family}`,
-            n: "PPDL-FS",
-          },
-        ];
+  const refs = (species.references && species.references.length > 0)
+    ? species.references.map((r) => ({
+        source: r.source || "Reference",
+        title: r.label || r.title || r.url,
+        url: r.url || "#",
+        n: r.n || "",
+      }))
+    : [];
 
   const heroVariant = "default";
   const glyph = (species.common || "").split(" ")[0].slice(0, 3);
@@ -130,6 +117,13 @@ export default async function SpeciesPage({ params }) {
       </section>
 
       <SpeciesNav
+        sections={[
+          { id: "identification", label: "Quick ID" },
+          { id: "damage", label: "Where Encountered" },
+          { id: "management", label: "Management" },
+          { id: "lookalikes", label: "Lookalikes" },
+          ...(refs.length > 0 ? [{ id: "references", label: "References" }] : []),
+        ]}
         prev={{ href: `/p/${projectId}/g/${groupId}/s/${prev.id}`, label: prev.common }}
         next={{ href: `/p/${projectId}/g/${groupId}/s/${next.id}`, label: next.common }}
       />
@@ -166,49 +160,15 @@ export default async function SpeciesPage({ params }) {
               </p>
             </div>
             <div className="callout">
-              <span className="k">Field tip</span>
-              {species.habitat ? (
-                <>
-                  Look in{" "}
-                  <strong>{species.habitat.toLowerCase()}</strong> first. The
-                  damage signature shows up there before the insect itself
-                  becomes visible.
-                </>
-              ) : (
-                <>
-                  Inspect harborage zones before treating. Visible damage
-                  usually trails the population by weeks.
-                </>
-              )}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* range */}
-      <section className="species-section" id="range">
-        <div className="species-section-inner">
-          <div className="species-section-eyebrow">03 · Geographic Range</div>
-          <h2>Indiana distribution</h2>
-          <div className="map-wrap">
-            <div className="map-svg">
-              <IndianaMap range={species.range} />
-            </div>
-            <div className="map-key">
-              <div className="row">
-                <div className="sw" style={{ background: "var(--gold-rush)" }} />
-                Reported range
-              </div>
-              <div className="row">
-                <div className="sw" style={{ background: "white" }} />
-                Limited or absent
-              </div>
-              <div className="disclaimer">
-                Range maps are compiled from publicly available occurrence
-                data, which often mismatches actual range and abundance. Treat
-                these as a coarse guide, not a definitive distribution. Submit
-                unusual finds to the PPDL.
-              </div>
+              <span className="k">Need help identifying this?</span>
+              The Purdue{" "}
+              <a href={PPDL_URL} target="_blank" rel="noopener">
+                Plant &amp; Pest Diagnostic Laboratory (PPDL)
+              </a>{" "}
+              accepts physical and digital specimens for confirmed
+              identification and provides tailored control recommendations.
+              Contact PPDL when a confident ID matters — for instance before
+              applying any treatment.
             </div>
           </div>
         </div>
@@ -221,7 +181,7 @@ export default async function SpeciesPage({ params }) {
         style={{ background: "white" }}
       >
         <div className="species-section-inner">
-          <div className="species-section-eyebrow">04 · Management</div>
+          <div className="species-section-eyebrow">03 · Management</div>
           <h2>Short notes, not a treatment plan</h2>
           <div className="two-col">
             <div className="prose">
@@ -240,7 +200,7 @@ export default async function SpeciesPage({ params }) {
       {/* lookalikes */}
       <section className="species-section" id="lookalikes">
         <div className="species-section-inner">
-          <div className="species-section-eyebrow">05 · Lookalikes</div>
+          <div className="species-section-eyebrow">04 · Lookalikes</div>
           <h2>Don&rsquo;t confuse with</h2>
           {lookalikes.length === 0 ? (
             <div
@@ -289,41 +249,43 @@ export default async function SpeciesPage({ params }) {
         </div>
       </section>
 
-      {/* references */}
-      <section
-        className="species-section"
-        id="references"
-        style={{ background: "white" }}
-      >
-        <div className="species-section-inner">
-          <div className="species-section-eyebrow">06 · References</div>
-          <h2>Continue with the full publication</h2>
-          <div className="refs">
-            {refs.map((r, i) => {
-              const isExternal = r.url && r.url !== "#";
-              const inner = (
-                <>
-                  <span className="num">{String(i + 1).padStart(2, "0")}</span>
-                  <span>
-                    <div className="title">{r.title}</div>
-                    {r.n && <div className="pub">Pub. {r.n}</div>}
-                  </span>
-                  <span className="source">{r.source} ↗</span>
-                </>
-              );
-              return isExternal ? (
-                <a key={i} href={r.url} target="_blank" rel="noopener">
-                  {inner}
-                </a>
-              ) : (
-                <a key={i} aria-disabled="true">
-                  {inner}
-                </a>
-              );
-            })}
+      {/* references — only rendered when the species record actually has any */}
+      {refs.length > 0 && (
+        <section
+          className="species-section"
+          id="references"
+          style={{ background: "white" }}
+        >
+          <div className="species-section-inner">
+            <div className="species-section-eyebrow">05 · References</div>
+            <h2>Continue with the full publication</h2>
+            <div className="refs">
+              {refs.map((r, i) => {
+                const isExternal = r.url && r.url !== "#";
+                const inner = (
+                  <>
+                    <span className="num">{String(i + 1).padStart(2, "0")}</span>
+                    <span>
+                      <div className="title">{r.title}</div>
+                      {r.n && <div className="pub">Pub. {r.n}</div>}
+                    </span>
+                    <span className="source">{r.source} ↗</span>
+                  </>
+                );
+                return isExternal ? (
+                  <a key={i} href={r.url} target="_blank" rel="noopener">
+                    {inner}
+                  </a>
+                ) : (
+                  <a key={i} aria-disabled="true">
+                    {inner}
+                  </a>
+                );
+              })}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
     </div>
   );
 }

@@ -7,7 +7,7 @@ The information architecture is **four levels deep**:
 1. **Projects library** (`/`) — top-level collection of diagnostics projects (e.g. *Indoor Insects*, *Lawn & Garden Insects*, *Beetles of Indiana*).
 2. **Project home** (`/p/<projectId>`) — one project's group overview.
 3. **Group page** (`/p/<projectId>/g/<groupId>`) — every species in a group as a filterable tile grid.
-4. **Species page** (`/p/<projectId>/g/<groupId>/s/<speciesId>`) — full diagnostic record for a single species: quick-ID checklist, habitat & signs, range map, management notes, lookalikes, references.
+4. **Species page** (`/p/<projectId>/g/<groupId>/s/<speciesId>`) — full diagnostic record for a single species: quick-ID checklist, habitat & signs, management notes, lookalikes, and (when supplied) references.
 
 ## Stack
 
@@ -119,7 +119,8 @@ Typography stack (loaded via `next/font` in `app/layout.jsx`):
 - **Hash routing → real routes.** The original prototype used `#/` URL hashes. The Next.js port uses path-based routing; URLs are now shareable and indexable.
 - **Search.** The header search box updates `?q=` in the URL; the group page reads it from `searchParams` and filters its tile grid.
 - **Compare drawer.** Toggling compare on a species tile adds it to a global drawer (max 2). Selection persists across navigation via `localStorage`. The "Compare side-by-side" button opens a side-by-side modal table.
-- **Range map disclaimer.** The species page MUST include the italic disclaimer next to the map key (do not remove): *"Range maps are compiled from publicly available occurrence data, which often mismatches actual range and abundance. Treat these as a coarse guide, not a definitive distribution. Submit unusual finds to the PPDL."*
+- **PPDL referral.** The "Where Encountered" section ends with a callout pointing readers to the [Purdue Plant & Pest Diagnostic Laboratory](https://ag.purdue.edu/department/btny/ppdl/) for confirmed identifications and treatment recommendations.
+- **References are opt-in.** The references section only renders when a species record actually has `references` entries — there's no placeholder fallback.
 - **Image fallback.** When a species/group/project image is missing or 404s, the `Plate` component falls back to the striped placeholder.
 - **Sticky in-page nav.** The species page has a 6-section sticky nav with smooth scroll and active-section tracking.
 

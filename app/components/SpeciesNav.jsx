@@ -3,24 +3,16 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-const SECTIONS = [
-  { id: "identification", label: "Quick ID" },
-  { id: "damage", label: "Where Encountered" },
-  { id: "range", label: "Range" },
-  { id: "management", label: "Management" },
-  { id: "lookalikes", label: "Lookalikes" },
-  { id: "references", label: "References" },
-];
-
-// Sticky in-page navigation for the species page. Highlights the current
-// section as the user scrolls and smooth-scrolls to anchors on click.
-export default function SpeciesNav({ prev, next }) {
-  const [activeSection, setActiveSection] = useState("identification");
+// Sticky in-page navigation for the species page. The page computes which
+// sections are actually rendered (the references section is conditional)
+// and passes them in so the nav never points at a missing anchor.
+export default function SpeciesNav({ sections, prev, next }) {
+  const [activeSection, setActiveSection] = useState(sections[0]?.id);
 
   useEffect(() => {
     const onScroll = () => {
-      let active = SECTIONS[0].id;
-      for (const s of SECTIONS) {
+      let active = sections[0]?.id;
+      for (const s of sections) {
         const el = document.getElementById(s.id);
         if (!el) continue;
         const top = el.getBoundingClientRect().top;
@@ -31,7 +23,7 @@ export default function SpeciesNav({ prev, next }) {
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [sections]);
 
   const onClick = (id) => (e) => {
     e.preventDefault();
@@ -42,7 +34,7 @@ export default function SpeciesNav({ prev, next }) {
   return (
     <div className="species-nav">
       <div className="species-nav-inner">
-        {SECTIONS.map((s) => (
+        {sections.map((s) => (
           <button
             key={s.id}
             className={activeSection === s.id ? "active" : ""}
