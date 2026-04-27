@@ -71,16 +71,19 @@ next.config.mjs / package.json / jsconfig.json / .gitignore — Next.js plumbing
 
 ## Editing content
 
-All content edits happen under `content/`. **No code changes are required to add a project, group, or species** — the site rebuilds itself from these JSON files.
+All content edits happen under `content/` (text + structure) and `public/images/` (photos). **No code changes are required to add a project, group, or species** — the site rebuilds itself from these files.
 
-See [`content/README.md`](content/README.md) for the full field-by-field schema and worked examples for adding a new project, group, or species.
+Two editor guides, side by side:
+
+- 📄 **[`content/README.md`](content/README.md)** — full field-by-field JSON schema and worked examples for adding a new project, group, or species.
+- 🖼️ **[`public/images/README.md`](public/images/README.md)** — where to drop photos and how to link them from JSON, with file-format guidance.
 
 The short version:
 
 - **Add a project:** append an entry to `content/projects.json`, then create `content/projects/<id>/groups.json` (use `status: "planned"` if you only want a placeholder tile).
 - **Add a group inside a project:** append to `content/projects/<projectId>/groups.json` and create `content/projects/<projectId>/species/<groupId>.json`.
 - **Add a species:** append a record to the relevant `content/projects/<projectId>/species/<groupId>.json`.
-- **Add a photo:** drop the file under `public/images/projects/<projectId>/...` and reference it from JSON as `"image": "/images/projects/<projectId>/species/<speciesId>.jpg"` (root-relative).
+- **Add a photo:** drop the file under `public/images/projects/<projectId>/...` and reference it from JSON as `"image": "/images/projects/<projectId>/species/<speciesId>.jpg"` (root-relative — note the leading `/` and no `public/`).
 
 `groupCount` and `speciesCount` are recomputed from disk at build time — leave them off your edits or they'll be overwritten.
 

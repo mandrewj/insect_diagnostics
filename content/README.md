@@ -16,15 +16,17 @@ content/
         <groupId>.json                          species records — one file per group
 ```
 
-Photos live separately, under `public/images/`:
+Photos live separately, under `public/images/` — see [`/public/images/README.md`](../public/images/README.md) for the full image workflow (where to drop files, how to link them, file-format guidance).
+
+The short version:
 
 ```
-public/images/projects/<projectId>/cover.jpg                  project tile cover
-public/images/projects/<projectId>/groups/<groupId>.jpg       group tile hero
-public/images/projects/<projectId>/species/<speciesId>.jpg    primary species plate
+public/images/projects/<projectId>/cover.jpg                  ← project tile cover
+public/images/projects/<projectId>/groups/<groupId>.jpg       ← group tile hero
+public/images/projects/<projectId>/species/<speciesId>.jpg    ← primary species plate
 ```
 
-Reference an image from JSON using its **root-relative path**, e.g.
+Reference each image from JSON using its **root-relative path** (drop the `public/` prefix, keep the leading `/`):
 
 ```json
 "image": "/images/projects/indoor-insects/species/odorous-house-ant.jpg"
