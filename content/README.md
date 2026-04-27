@@ -114,8 +114,7 @@ An array of species records. Add, remove, or reorder freely.
     "scientific": "Tapinoma sessile",
     "family": "Formicidae",
     "order": "Hymenoptera",
-    "damage": "In Homes",
-    "habitat": "Kitchen, walls",
+    "habitat": "In Homes",
     "range": "Statewide",
     "size": "2.4–3.3 mm",
     "color": "#3a3a3e",
@@ -125,8 +124,9 @@ An array of species records. Add, remove, or reorder freely.
       "Even, brown-black body color",
       "Crushed workers smell of rotten coconut"
     ],
-    "damageNotes": "No structural damage. Contaminates exposed food…",
+    "habitatNotes": "No structural damage. Contaminates exposed food…",
     "management": "Sanitation, moisture correction, slow-acting baits…",
+    "additionalNotes": "Optional free-form notes that render as the final section on the species page when present.",
     "image": "/images/projects/indoor-insects/species/odorous-house-ant.jpg",
     "imageCredit": "Photo: J. Doe / Purdue Entomology",
     "references": [
@@ -147,18 +147,29 @@ An array of species records. Add, remove, or reorder freely.
 | `common` | yes | Common name. |
 | `scientific` | yes | Italicised on display. |
 | `family`, `order` | yes | Shown in the species hero stat row and in filter chips. |
-| `damage` | yes | One of the **Where Encountered** filter values — keep it consistent across the file (`In Homes`, `Stored Products`, `Around Structures`, `Structural`, etc.). |
-| `habitat`, `range`, `size` | yes | One-line strings. |
+| `habitat` | yes | The **Habitat** filter chip — keep values consistent across the project (`In Homes`, `Stored Products`, `Around Structures`, `Structural`, etc.). Also shown in the species hero metadata grid. |
+| `range`, `size` | yes | One-line strings. |
 | `color` | yes | Hex. Drives the placeholder wash. |
 | `tags` | optional | Short labels surfaced on the species hero. |
 | `quickId` | yes | Array of 3–5 short identification points. |
-| `damageNotes` | yes | Paragraph. |
-| `management` | yes | Paragraph. |
+| `habitatNotes` | yes | Paragraph rendered in the **Habitat & signs** section (left column, beside the PPDL referral card). |
+| `management` | optional | Paragraph rendered in the **Summary of Treatment Options** section. Omit / leave blank to skip the entire section (and the corresponding sticky-nav link). |
+| `additionalNotes` | optional | Free-form prose rendered as the final section. Omit / leave blank to skip it. Use blank lines (`\n\n`) inside the string to break paragraphs. |
 | `image` | optional | Root-relative path to a primary photo. Empty / missing → striped placeholder. |
 | `imageCredit` | optional | Caption rendered over the bottom-right of the photo. |
-| `references` | optional | Array of `{source, label, url, n}`. Empty = a generic Purdue Extension stub. |
+| `references` | optional | Array of `{source, label, url, n}`. Empty / missing → the references section is hidden entirely. |
 
 The `range` field appears in the species hero metadata grid as a one-line label (e.g. "Statewide", "Northern Indiana"). Plain prose is fine.
+
+### Sections that auto-hide
+
+The species page renders sections in order, computing eyebrow numbers (01, 02, …) from what's actually present. Three sections are conditional:
+
+- **Management** — hidden if `management` is empty.
+- **References** — hidden if `references` is empty or missing.
+- **Additional notes** — hidden unless `additionalNotes` is set.
+
+When a section is hidden, its sticky-nav link disappears and the surrounding numbering reflows so there are no gaps.
 
 ## Common tasks
 

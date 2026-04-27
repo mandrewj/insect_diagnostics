@@ -14,7 +14,7 @@ export default function SpeciesGrid({ projectId, groupId, species }) {
   const search = params.get("q") || "";
   const [orderFilter, setOrderFilter] = useState("All");
   const [familyFilter, setFamilyFilter] = useState("All");
-  const [damageFilter, setDamageFilter] = useState("All");
+  const [habitatFilter, setHabitatFilter] = useState("All");
 
   const orders = useMemo(
     () => ["All", ...Array.from(new Set(species.map((s) => s.order)))],
@@ -24,18 +24,18 @@ export default function SpeciesGrid({ projectId, groupId, species }) {
     () => ["All", ...Array.from(new Set(species.map((s) => s.family)))],
     [species]
   );
-  const damages = useMemo(
-    () => ["All", ...Array.from(new Set(species.map((s) => s.damage)))],
+  const habitats = useMemo(
+    () => ["All", ...Array.from(new Set(species.map((s) => s.habitat)))],
     [species]
   );
 
   const filtered = species.filter((s) => {
     if (orderFilter !== "All" && s.order !== orderFilter) return false;
     if (familyFilter !== "All" && s.family !== familyFilter) return false;
-    if (damageFilter !== "All" && s.damage !== damageFilter) return false;
+    if (habitatFilter !== "All" && s.habitat !== habitatFilter) return false;
     if (search) {
       const q = search.toLowerCase();
-      const blob = [s.common, s.scientific, s.family, s.order, s.damage, s.habitat]
+      const blob = [s.common, s.scientific, s.family, s.order, s.habitat]
         .join(" ")
         .toLowerCase();
       if (!blob.includes(q)) return false;
@@ -71,14 +71,14 @@ export default function SpeciesGrid({ projectId, groupId, species }) {
           ))}
         </div>
         <div className="filterbar-group">
-          <span className="filterbar-label">Where Encountered</span>
-          {damages.map((d) => (
+          <span className="filterbar-label">Habitat</span>
+          {habitats.map((h) => (
             <button
-              key={d}
-              className={"chip" + (damageFilter === d ? " active" : "")}
-              onClick={() => setDamageFilter(d)}
+              key={h}
+              className={"chip" + (habitatFilter === h ? " active" : "")}
+              onClick={() => setHabitatFilter(h)}
             >
-              {d}
+              {h}
             </button>
           ))}
         </div>
@@ -122,10 +122,6 @@ function SpeciesTile({ species: s, projectId, groupId }) {
             <div className="tile-reveal-row">
               <span className="k">Size</span>
               <span className="v">{s.size}</span>
-            </div>
-            <div className="tile-reveal-row">
-              <span className="k">Damage</span>
-              <span className="v">{s.damage}</span>
             </div>
             <div className="tile-reveal-row">
               <span className="k">Habitat</span>

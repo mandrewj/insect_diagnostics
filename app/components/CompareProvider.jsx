@@ -98,7 +98,6 @@ function CompareModal({ a, b, onClose }) {
     { k: "Family", get: (s) => s.family },
     { k: "Order", get: (s) => s.order },
     { k: "Size", get: (s) => s.size },
-    { k: "Where Encountered", get: (s) => s.damage },
     { k: "Habitat", get: (s) => s.habitat },
     { k: "Range", get: (s) => s.range },
     {
@@ -113,7 +112,7 @@ function CompareModal({ a, b, onClose }) {
         </ul>
       ),
     },
-    { k: "Damage notes", get: (s) => s.damageNotes },
+    { k: "Habitat notes", get: (s) => s.habitatNotes },
     { k: "Management", get: (s) => s.management },
   ];
 
