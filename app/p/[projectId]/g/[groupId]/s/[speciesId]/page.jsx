@@ -152,14 +152,8 @@ export default async function SpeciesPage({ params }) {
           <div className="two-col">
             <div className="prose">
               <p>{species.damageNotes}</p>
-              <p>
-                Visual cues alone are rarely conclusive. Combine the quick-ID
-                points above with location, season, and substrate to narrow
-                your call. When in doubt, collect a specimen and contact the
-                Purdue Plant &amp; Pest Diagnostic Laboratory.
-              </p>
             </div>
-            <div className="callout">
+            <div className="callout" style={{ alignSelf: "center" }}>
               <span className="k">Need help identifying this?</span>
               The Purdue{" "}
               <a href={PPDL_URL} target="_blank" rel="noopener">
@@ -167,8 +161,6 @@ export default async function SpeciesPage({ params }) {
               </a>{" "}
               accepts physical and digital specimens for confirmed
               identification and provides tailored control recommendations.
-              Contact PPDL when a confident ID matters — for instance before
-              applying any treatment.
             </div>
           </div>
         </div>
@@ -182,16 +174,19 @@ export default async function SpeciesPage({ params }) {
       >
         <div className="species-section-inner">
           <div className="species-section-eyebrow">03 · Management</div>
-          <h2>Short notes, not a treatment plan</h2>
+          <h2>Summary of Treatment Options</h2>
           <div className="two-col">
             <div className="prose">
               <p>{species.management}</p>
             </div>
             <div className="callout">
               <span className="k">Before treating</span>
-              Match the species to a Purdue Extension publication (see
-              references) and confirm pesticide labels permit the site of use.
-              Treatment decisions belong with a licensed applicator.
+              Read and follow all label instructions. This includes directions
+              for use, precautionary statements (hazards to humans, domestic
+              animals, and endangered species), environmental hazards, rates
+              of application, number of applications, reentry intervals,
+              harvest restrictions, storage and disposal, and any specific
+              warnings and/or precautions for safe handling of the pesticide.
             </div>
           </div>
         </div>

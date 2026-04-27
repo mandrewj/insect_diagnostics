@@ -48,7 +48,7 @@ app/                                Next.js App Router routes
   p/[projectId]/page.jsx              "/p/:projectId" — project home
   p/[projectId]/g/[groupId]/page.jsx  "/p/:projectId/g/:groupId" — group
   p/[projectId]/g/[groupId]/s/[speciesId]/page.jsx — species
-  components/                         shared UI (Plate, AppBar, IndianaMap, etc.)
+  components/                         shared UI (Plate, AppBar, IndianaGlyph, etc.)
   globals.css                         all styling (design tokens at top)
 
 lib/data.js                         server-only loader for content/
