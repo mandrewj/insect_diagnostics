@@ -65,10 +65,11 @@ Missing or broken image paths fall back to the striped placeholder — editing J
 | `name` | Project name shown on the projects-home tile, app bar, and hero. |
 | `sciName` | Scientific subtitle (italics on display). |
 | `blurb` | One-sentence description for the projects-home tile and the project hero. |
-| `swatch`, `pattern` | Decorative tonal wash + striped pattern for the placeholder plate. |
+| `pattern` | Decorative striped pattern for the placeholder plate. |
 | `image` | Optional cover image. Empty string = striped placeholder. |
 | `status` | `active` (load groups + species) or `planned` (render a tile + stub home page only). |
 | `groupCount` | **Auto-derived** at build time — leave it off or it'll be overwritten. |
+| `swatch` | **Auto-derived from `id`** at read time — omit it. (Optional override: set a hex value to force a specific tone for the placeholder tile.) |
 
 ### `content/projects/<projectId>/groups.json`
 
@@ -97,10 +98,10 @@ Missing or broken image paths fall back to the striped placeholder — editing J
 | `name` | Group common name on the tile + page hero. |
 | `sciName` | Scientific group name (italics on display). |
 | `blurb` | One-sentence description for the project-home tile. |
-| `swatch` | Tonal hex used as a background wash on the placeholder tile. |
 | `pattern` | One of `diagonal`, `stipple`, `weave`, `grain`, `wing`, `web`, `hex`, `scale` — purely decorative. |
 | `image` | Optional. Empty = placeholder. |
 | `speciesCount` | **Auto-derived** from the species file at build — leave it off or it'll be overwritten. |
+| `swatch` | **Auto-derived from `id`** — omit it. (Optional hex override behaves like the projects-level `swatch`.) |
 
 `lookalikes` maps a species id to an array of similar species ids; the species page surfaces these in the **Lookalikes** section. Lookalikes are scoped to one project and may cross groups within that project.
 
@@ -151,7 +152,7 @@ An array of species records. Add, remove, or reorder freely.
 | `family`, `order` | yes | Shown in the species hero stat row and in filter chips. |
 | `habitat` | yes | The **Habitat** filter chip — keep values consistent across the project (`In Homes`, `Stored Products`, `Around Structures`, `Structural`, etc.). Also shown in the species hero metadata grid. |
 | `range`, `size` | yes | One-line strings. |
-| `color` | yes | Hex. Drives the placeholder wash. |
+| `color` | optional | **Auto-derived from `id`** — omit it. (Optional hex override sets the placeholder wash for this species specifically.) |
 | `tags` | optional | Short labels surfaced on the species hero. |
 | `quickId` | yes | Array of 3–5 short identification points. |
 | `habitatNotes` | yes | Paragraph rendered in the **Habitat & signs** section (left column, beside the PPDL referral card). |

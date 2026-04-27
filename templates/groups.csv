@@ -1,9 +1,9 @@
-project_id,id,name,sciName,blurb,swatch,pattern,image
-indoor-insects,ants,Ants,Formicidae,"Social hymenopterans nesting indoors and outdoors. Identification often hinges on petiole, antennal segments, and odor.",#8E6F3E,diagonal,/images/projects/indoor-insects/groups/ants.jpg
-indoor-insects,cockroaches,Cockroaches,Blattodea,"Nocturnal scavengers found near food, moisture, and harborage. Pronotal markings and size separate the common indoor species.",#555960,stipple,/images/projects/indoor-insects/groups/cockroaches.jpg
-indoor-insects,bed-bugs,Bed Bugs & Kin,Cimicidae,"Obligate blood-feeders associated with sleeping areas. Size, color, and harborage location guide field identification.",#DAAA00,weave,/images/projects/indoor-insects/groups/bedbugs.jpg
-indoor-insects,stored-product,Stored-Product Pests,Coleoptera & Lepidoptera,"Beetles and moths that infest grains, flour, and dry goods. Larval damage is often the first signal.",#CFB991,grain,/images/projects/indoor-insects/groups/stored-product.jpg
-indoor-insects,flies,Flies & Gnats,Diptera,"Drain, fruit, fungus, and house flies share habits but differ sharply in venation, size, and breeding substrate.",#6F727B,wing,/images/projects/indoor-insects/groups/flies.jpg
-indoor-insects,spiders,Spiders,Araneae,"Most indoor spiders are harmless. Two medically significant species in Indiana require careful, calm identification.",#000000,web,/images/projects/indoor-insects/groups/spiders.jpg
-indoor-insects,wasps,Wasps & Bees,Vespidae & Apidae,Nest architecture and color pattern carry most of the diagnostic weight when specimens are not in hand.,#C4BFC0,hex,/images/projects/indoor-insects/groups/wasps.jpg
-indoor-insects,silverfish,Silverfish & Booklice,Zygentoma & Psocodea,"Small, soft-bodied pests of paper, starch, and damp materials. Often the first sign of moisture problems.",#EBD99F,scale,/images/projects/indoor-insects/groups/silverfish.jpg
+project_id,id,name,sciName,blurb,pattern,image
+indoor-insects,ants,Ants,Formicidae,"Social hymenopterans nesting indoors and outdoors. Identification often hinges on petiole, antennal segments, and odor.",diagonal,/images/projects/indoor-insects/groups/ants.jpg
+indoor-insects,cockroaches,Cockroaches,Blattodea,"Nocturnal scavengers found near food, moisture, and harborage. Pronotal markings and size separate the common indoor species.",stipple,/images/projects/indoor-insects/groups/cockroaches.jpg
+indoor-insects,bed-bugs,Bed Bugs & Kin,Cimicidae,"Obligate blood-feeders associated with sleeping areas. Size, color, and harborage location guide field identification.",weave,/images/projects/indoor-insects/groups/bedbugs.jpg
+indoor-insects,stored-product,Stored-Product Pests,Coleoptera & Lepidoptera,"Beetles and moths that infest grains, flour, and dry goods. Larval damage is often the first signal.",grain,/images/projects/indoor-insects/groups/stored-product.jpg
+indoor-insects,flies,Flies & Gnats,Diptera,"Drain, fruit, fungus, and house flies share habits but differ sharply in venation, size, and breeding substrate.",wing,/images/projects/indoor-insects/groups/flies.jpg
+indoor-insects,spiders,Spiders,Araneae,"Most indoor spiders are harmless. Two medically significant species in Indiana require careful, calm identification.",web,/images/projects/indoor-insects/groups/spiders.jpg
+indoor-insects,wasps,Wasps & Bees,Vespidae & Apidae,Nest architecture and color pattern carry most of the diagnostic weight when specimens are not in hand.,hex,/images/projects/indoor-insects/groups/wasps.jpg
+indoor-insects,silverfish,Silverfish & Booklice,Zygentoma & Psocodea,"Small, soft-bodied pests of paper, starch, and damp materials. Often the first sign of moisture problems.",scale,/images/projects/indoor-insects/groups/silverfish.jpg

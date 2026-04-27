@@ -117,14 +117,15 @@ function main() {
     map[l.species_id].push(l.lookalike_id);
   }
 
-  // 1) projects.json — full rewrite from the CSV (it must list every project)
+  // 1) projects.json — full rewrite from the CSV (it must list every project).
+  // The placeholder tile tone (swatch / color) is auto-derived at build time
+  // by lib/data.js from the id, so we don't carry those fields through here.
   const projectsOut = {
     projects: projects.map((p) => ({
       id: p.id,
       name: p.name,
       sciName: p.sciName,
       blurb: p.blurb,
-      swatch: p.swatch,
       pattern: p.pattern,
       image: p.image,
       status: p.status || "active",
@@ -145,7 +146,6 @@ function main() {
         name: g.name,
         sciName: g.sciName,
         blurb: g.blurb,
-        swatch: g.swatch,
         pattern: g.pattern,
         image: g.image,
       })),
@@ -168,7 +168,6 @@ function main() {
           habitat: s.habitat,
           range: s.range,
           size: s.size,
-          color: s.color,
           tags: splitMulti(s.tags),
           quickId: splitMulti(s.quickId),
           habitatNotes: s.habitatNotes || "",

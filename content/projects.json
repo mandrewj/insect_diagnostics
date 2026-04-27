@@ -5,7 +5,6 @@
       "name": "Indoor Insects",
       "sciName": "Pests of homes and structures",
       "blurb": "Insects, arachnids, and small invertebrates that turn up indoors. Identification, habitat, and management for the species most frequently encountered.",
-      "swatch": "#8E6F3E",
       "pattern": "diagonal",
       "image": "/images/projects/indoor-insects/cover.jpg",
       "status": "active"
@@ -15,7 +14,6 @@
       "name": "Lawn & Garden Insects",
       "sciName": "Pests and beneficials of turf and ornamentals",
       "blurb": "Beetles, caterpillars, true bugs, and pollinators across residential lawns, vegetable plots, and ornamental beds.",
-      "swatch": "#6B7A3A",
       "pattern": "grain",
       "image": "/images/projects/lawn-garden/cover.jpg",
       "status": "planned"
@@ -25,7 +23,6 @@
       "name": "Beetles of Indiana",
       "sciName": "Coleoptera",
       "blurb": "Field reference to the beetle families and conspicuous species recorded across Indiana, with emphasis on diagnostic external characters.",
-      "swatch": "#3a2a1a",
       "pattern": "stipple",
       "image": "/images/projects/beetles-of-indiana/cover.jpg",
       "status": "planned"

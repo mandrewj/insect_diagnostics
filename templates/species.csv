@@ -1,88 +1,88 @@
-project_id,group_id,id,common,scientific,family,order,habitat,range,size,color,tags,quickId,habitatNotes,management,additionalNotes,image,imageCredit
-indoor-insects,ants,odorous-house-ant,Odorous House Ant,Tapinoma sessile,Formicidae,Hymenoptera,In Homes,Statewide,2.4–3.3 mm,#3a3a3e,"Trail-forming
+project_id,group_id,id,common,scientific,family,order,habitat,range,size,tags,quickId,habitatNotes,management,additionalNotes,image,imageCredit
+indoor-insects,ants,odorous-house-ant,Odorous House Ant,Tapinoma sessile,Formicidae,Hymenoptera,In Homes,Statewide,2.4–3.3 mm,"Trail-forming
 Sweet-feeding","Single, hidden node on petiole
 Even, brown-black body color
 Crushed workers smell of rotten coconut
 Trails along baseboards and counters","No structural damage. Contaminates exposed food and forms persistent indoor trails, especially after rain pushes colonies inside.","Sanitation, moisture correction, and slow-acting sugar baits. Avoid repellent sprays that fragment colonies.",,,
-indoor-insects,ants,carpenter-ant,Black Carpenter Ant,Camponotus pennsylvanicus,Formicidae,Hymenoptera,Structural,Statewide,6–13 mm,#1a1a1c,"Polymorphic
+indoor-insects,ants,carpenter-ant,Black Carpenter Ant,Camponotus pennsylvanicus,Formicidae,Hymenoptera,Structural,Statewide,6–13 mm,"Polymorphic
 Wood-nesting","Single petiole node, evenly rounded thorax
 Workers vary widely in size within a colony
 Coarse golden hairs on gaster
 Sawdust-like frass below galleries","Excavates galleries in moisture-damaged wood. Damage is structural over years, not days; finding frass is the typical first sign.",Locate and correct moisture sources. Trace foraging trails back to satellite nests; treat parent colony directly.,,,
-indoor-insects,ants,pavement-ant,Pavement Ant,Tetramorium immigrans,Formicidae,Hymenoptera,Around Structures,Statewide,2.5–3 mm,#4a3a2a,Slab-nesting,"Two petiole nodes
+indoor-insects,ants,pavement-ant,Pavement Ant,Tetramorium immigrans,Formicidae,Hymenoptera,Around Structures,Statewide,2.5–3 mm,Slab-nesting,"Two petiole nodes
 Parallel grooves on head and thorax
 Soil mounds along sidewalks and slab edges
 Slow, deliberate trails",Nuisance only. Soil displacement under slabs occasionally noticeable.,Granular or gel baits placed near nest entrances. Seal slab cracks to limit indoor entry.,,,
-indoor-insects,ants,pharaoh-ant,Pharaoh Ant,Monomorium pharaonis,Formicidae,Hymenoptera,In Homes,Statewide,1.5–2 mm,#a87a3a,"Budding
+indoor-insects,ants,pharaoh-ant,Pharaoh Ant,Monomorium pharaonis,Formicidae,Hymenoptera,In Homes,Statewide,1.5–2 mm,"Budding
 Indoor-only","Yellow to honey-amber body, darker gaster
 Two petiole nodes, 12-segmented antennae with three-segmented club
 Tiny — about 2 mm
 Multiple satellite nests within heated structures",Critical concern in hospitals and food-handling facilities. Sprays cause budding and worsen infestations.,Bait-only programs across the entire structure. Never use repellent contact insecticides.,,,
-indoor-insects,cockroaches,german-cockroach,German Cockroach,Blattella germanica,Ectobiidae,Blattodea,In Homes,Statewide,13–16 mm,#7a5a2a,"Indoor-only
+indoor-insects,cockroaches,german-cockroach,German Cockroach,Blattella germanica,Ectobiidae,Blattodea,In Homes,Statewide,13–16 mm,"Indoor-only
 Prolific","Two parallel dark stripes on pronotum
 Light tan to caramel body
 Nymphs nearly black with a pale stripe
 Egg case carried by female until hatch",Allergens and pathogen carriage. Feeds on virtually any organic residue.,"Gel baits, IGRs, sanitation. Monitor with sticky traps in corners along walls.",,,
-indoor-insects,cockroaches,american-cockroach,American Cockroach,Periplaneta americana,Blattidae,Blattodea,Around Structures,Statewide,35–40 mm,#5a2a1a,"Peridomestic
+indoor-insects,cockroaches,american-cockroach,American Cockroach,Periplaneta americana,Blattidae,Blattodea,Around Structures,Statewide,35–40 mm,"Peridomestic
 Large","Reddish-brown with pale yellow pronotal margin
 Largest common indoor roach
 Adults fly short distances in warm weather
 Associated with sewers, steam tunnels",Indicator of plumbing or drainage issues. Strong musty odor in heavy infestations.,Seal floor drains and sewer access. Bait stations in utility chases.,,,
-indoor-insects,cockroaches,oriental-cockroach,Oriental Cockroach,Blatta orientalis,Blattidae,Blattodea,In Homes,Statewide,25–30 mm,#1a1a1a,Cool-tolerant,"Glossy near-black body
+indoor-insects,cockroaches,oriental-cockroach,Oriental Cockroach,Blatta orientalis,Blattidae,Blattodea,In Homes,Statewide,25–30 mm,Cool-tolerant,"Glossy near-black body
 Females wingless; males with short wings
 Slow-moving compared to other species
 Strong preference for damp, cool spaces",Frequent in basements and crawlspaces; signals moisture problems.,"Dehumidify, exclude. Granular baits in voids and along foundations.",,,
-indoor-insects,bed-bugs,common-bed-bug,Common Bed Bug,Cimex lectularius,Cimicidae,Hemiptera,In Homes,Statewide,4–5 mm,#6a2a1a,"Hematophagous
+indoor-insects,bed-bugs,common-bed-bug,Common Bed Bug,Cimex lectularius,Cimicidae,Hemiptera,In Homes,Statewide,4–5 mm,"Hematophagous
 Cryptic","Apple-seed shape, flattened dorsally
 Reddish-brown; engorged adults are darker and rounded
 Banded segmentation on abdomen
 Fecal spotting on seams and headboards",Bite reactions vary widely. Not a confirmed disease vector under typical exposure.,"Integrated approach: encasements, heat, vacuuming, targeted residuals. Inspect-confirm before treatment.",,/images/projects/indoor-insects/species/bedbug.jpg,
-indoor-insects,bed-bugs,bat-bug,Bat Bug,Cimex adjunctus,Cimicidae,Hemiptera,In Homes,Statewide,4–5 mm,#7a3a2a,Bat-associated,"Visually near-identical to bed bug
+indoor-insects,bed-bugs,bat-bug,Bat Bug,Cimex adjunctus,Cimicidae,Hemiptera,In Homes,Statewide,4–5 mm,Bat-associated,"Visually near-identical to bed bug
 Longer fringe hairs on pronotum (microscope needed)
 Found near roosts, not beds, in initial infestations
 Bites people only after bats leave",Indicator of a current or former bat colony in the structure.,"Exclude bats first (legally and seasonally), then treat harborage. Treating without exclusion fails.",,,
-indoor-insects,stored-product,indianmeal-moth,Indianmeal Moth,Plodia interpunctella,Pyralidae,Lepidoptera,Stored Products,Statewide,8–10 mm,#a07a4a,Webbing,"Forewing two-toned: pale base, coppery outer two-thirds
+indoor-insects,stored-product,indianmeal-moth,Indianmeal Moth,Plodia interpunctella,Pyralidae,Lepidoptera,Stored Products,Statewide,8–10 mm,Webbing,"Forewing two-toned: pale base, coppery outer two-thirds
 Resting moths held tent-like over body
 Larvae produce silk webbing in food
 Often first noticed flying around lights","Larvae contaminate grains, dried fruit, pet food, and birdseed with frass and webbing.","Find and discard the source — every package. Pheromone traps confirm eradication, not control.",,,
-indoor-insects,stored-product,sawtoothed-grain-beetle,Sawtoothed Grain Beetle,Oryzaephilus surinamensis,Silvanidae,Coleoptera,Stored Products,Statewide,2.5–3 mm,#5a3a1a,Secondary feeder,"Six tooth-like projections on each side of pronotum
+indoor-insects,stored-product,sawtoothed-grain-beetle,Sawtoothed Grain Beetle,Oryzaephilus surinamensis,Silvanidae,Coleoptera,Stored Products,Statewide,2.5–3 mm,Secondary feeder,"Six tooth-like projections on each side of pronotum
 Slender, flattened body
 Cannot fly indoors
 Adults long-lived; populations build slowly","Cannot attack whole sound kernels; thrives on broken grain, flour, cereal, dried fruit.","Discard infested product, vacuum shelves, use sealed containers.",,,
-indoor-insects,flies,fruit-fly,Fruit Fly,Drosophila spp.,Drosophilidae,Diptera,In Homes,Statewide,3 mm,#a05a2a,Fermentation,"Bright red eyes
+indoor-insects,flies,fruit-fly,Fruit Fly,Drosophila spp.,Drosophilidae,Diptera,In Homes,Statewide,3 mm,Fermentation,"Bright red eyes
 Tan to yellow-brown body
 Slow, hovering flight near ripe fruit and drains
 Larvae in fermenting organic film","Indicator of fermenting matter — overripe fruit, beer/soda residue, organic film in drains.",Remove breeding material. Drain cleaning gels for biofilm. Apple-cider-vinegar traps as monitors.,,,
-indoor-insects,flies,drain-fly,Drain Fly,Psychodidae,Psychodidae,Diptera,In Homes,Statewide,2 mm,#4a4a4e,Biofilm,"Heart-shaped, fuzzy wings held roof-like
+indoor-insects,flies,drain-fly,Drain Fly,Psychodidae,Psychodidae,Diptera,In Homes,Statewide,2 mm,Biofilm,"Heart-shaped, fuzzy wings held roof-like
 Body and wings densely hairy ('moth fly')
 Weak fluttering flight near drains and sumps
 Larvae in drain biofilm","No bite, no disease, but presence indicates standing biofilm.",Mechanical drain brushing followed by enzyme/bacterial drain gels. Chemical drain cleaners alone do not work.,,,
-indoor-insects,spiders,brown-recluse,Brown Recluse,Loxosceles reclusa,Sicariidae,Araneae,In Homes,Southern Indiana,6–20 mm,#8a5a3a,"Venomous
+indoor-insects,spiders,brown-recluse,Brown Recluse,Loxosceles reclusa,Sicariidae,Araneae,In Homes,Southern Indiana,6–20 mm,"Venomous
 Reclusive","Six eyes in three pairs (most spiders have eight)
 Violin-shaped marking on cephalothorax
 Uniform tan legs without banding or spines
 Rarely on webs in open view",Bites are uncommon and require pressure against skin. Most suspected bites are misdiagnoses.,Glue boards along baseboards in undisturbed storage. Reduce clutter; shake out stored clothing.,,,
-indoor-insects,spiders,northern-black-widow,Northern Black Widow,Latrodectus variolus,Theridiidae,Araneae,Around Structures,Statewide,8–13 mm,#0a0a0a,Venomous,"Glossy black with red dorsal spots and a split hourglass below
+indoor-insects,spiders,northern-black-widow,Northern Black Widow,Latrodectus variolus,Theridiidae,Araneae,Around Structures,Statewide,8–13 mm,Venomous,"Glossy black with red dorsal spots and a split hourglass below
 Small, irregular cobweb in protected outdoor sites
 Females only — males are inconspicuous
 Hangs upside-down in web",Bites painful and medically significant; rarely fatal in healthy adults.,"Exclusion, glove use in storage. Web removal disrupts harborage.",,,
-indoor-insects,spiders,cellar-spider,Long-Bodied Cellar Spider,Pholcus phalangioides,Pholcidae,Araneae,In Homes,Statewide,7–8 mm body,#a89a8a,Beneficial,"Extremely long, thin legs (often confused with daddy long-legs)
+indoor-insects,spiders,cellar-spider,Long-Bodied Cellar Spider,Pholcus phalangioides,Pholcidae,Araneae,In Homes,Statewide,7–8 mm body,Beneficial,"Extremely long, thin legs (often confused with daddy long-legs)
 Pale, almost translucent body
 Loose, tangled cobweb in corners
 Vibrates rapidly when disturbed",Beneficial — captures other household spiders and insects.,Tolerate where possible. Web removal if appearance is a concern.,,,
-indoor-insects,wasps,paper-wasp,Northern Paper Wasp,Polistes fuscatus,Vespidae,Hymenoptera,Around Structures,Statewide,16–20 mm,#6a3a1a,Social,"Open, single-comb umbrella nest hung by a stalk
+indoor-insects,wasps,paper-wasp,Northern Paper Wasp,Polistes fuscatus,Vespidae,Hymenoptera,Around Structures,Statewide,16–20 mm,Social,"Open, single-comb umbrella nest hung by a stalk
 Slender, long-legged in flight; legs trail
 Reddish-brown with yellow markings, variable
 Calm unless nest is disturbed","Stings painful but colonies small. Annual nests, abandoned each fall.",Only treat nests in high-contact areas. Evening application; freeze-style aerosols.,,,
-indoor-insects,wasps,yellowjacket,Eastern Yellowjacket,Vespula maculifrons,Vespidae,Hymenoptera,Around Structures,Statewide,12–17 mm,#DAAA00,Aggressive,"Bright yellow and black banding, no body hair
+indoor-insects,wasps,yellowjacket,Eastern Yellowjacket,Vespula maculifrons,Vespidae,Hymenoptera,Around Structures,Statewide,12–17 mm,Aggressive,"Bright yellow and black banding, no body hair
 Enclosed nest in ground cavity, wall void, or tree base
 Aggressive defense within 3–4 m of nest
 Late-summer scavenging at picnics",Significant sting hazard; multiple stings possible. Allergic reactions are a real risk.,Mark entrance during daylight; treat at night. Professional removal for wall-void nests.,,,
-indoor-insects,silverfish,silverfish,Silverfish,Lepisma saccharinum,Lepismatidae,Zygentoma,In Homes,Statewide,12–19 mm,#9a9a9e,Wingless,"Tapered, fish-shaped body with metallic silver scales
+indoor-insects,silverfish,silverfish,Silverfish,Lepisma saccharinum,Lepismatidae,Zygentoma,In Homes,Statewide,12–19 mm,Wingless,"Tapered, fish-shaped body with metallic silver scales
 Three long tail filaments, two long antennae
 Rapid, fish-like darting movement
 Active at night in bathrooms, basements, attics","Surface grazing on starches, sizing in book bindings, wallpaper paste, stored paper.",Reduce humidity below 50%. Sticky monitors confirm activity. Long-lived; control is gradual.,,,
-indoor-insects,silverfish,booklouse,Booklouse,Liposcelis spp.,Liposcelididae,Psocodea,In Homes,Statewide,1–2 mm,#c0a890,Tiny,"Translucent pale-tan body, soft-bodied
+indoor-insects,silverfish,booklouse,Booklouse,Liposcelis spp.,Liposcelididae,Psocodea,In Homes,Statewide,1–2 mm,Tiny,"Translucent pale-tan body, soft-bodied
 About the size of a pinhead
 Wingless indoor forms most common
 Found on damp paper, behind wallpaper, in pantries","Feeds on microscopic mold, not the paper itself. A moisture problem in disguise.","Dehumidify. The mold disappears, the booklice follow. No insecticide needed in most cases.",,,

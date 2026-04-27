@@ -91,10 +91,11 @@ One row per top-level project.
 | `name` | Display name (`Indoor Insects`). |
 | `sciName` | Scientific subtitle, often a higher-level taxon or descriptor (`Pests of homes and structures`). |
 | `blurb` | One sentence describing the project. Shown on the homepage tile. |
-| `swatch` | A hex color (`#8E6F3E`) used as the placeholder tile background. Pick something earthy. |
 | `pattern` | One of `diagonal`, `stipple`, `weave`, `grain`, `wing`, `web`, `hex`, `scale`. Decorative only. |
 | `image` | Leave blank. |
 | `status` | `active` for live projects; `planned` for placeholders. |
+
+> The placeholder tile color is **auto-derived from the `id`** — no need to enter it.
 
 ### `groups` sheet
 
@@ -107,7 +108,6 @@ One row per group within a project.
 | `name` | Display name (`Ants`). |
 | `sciName` | Scientific name (`Formicidae`). |
 | `blurb` | One sentence about the group. |
-| `swatch` | Hex color for placeholder. |
 | `pattern` | Same options as projects. |
 | `image` | Leave blank. |
 
@@ -125,7 +125,6 @@ One row per species. This is where most of your work happens.
 | `habitat` | The categorical filter — `In Homes`, `Stored Products`, `Around Structures`, `Structural`, etc. **Be consistent across the project** — these become the filter chips on the group page. |
 | `range` | One-line geographic range (`Statewide`, `Southern Indiana`). |
 | `size` | Adult body size with units (`6–13 mm`). |
-| `color` | Hex color for placeholder when no photo. |
 | `tags` | Multi-line. Short labels like `Trail-forming`, `Sweet-feeding`. |
 | `quickId` | Multi-line. 3–5 short identification points. |
 | `habitatNotes` | Paragraph: where and when this species turns up, what signals its presence. |
@@ -175,7 +174,7 @@ When you're done editing, your instructor will tell you which of these to do:
 - **Inconsistent `habitat` values.** If three students each invent a slightly different label (`In homes` vs. `In Homes` vs. `Indoor`), they all become separate filter chips. Decide on the canonical labels with your group before you start.
 - **Commas inside cells.** Spreadsheets handle this automatically when exporting to CSV — but if you're hand-writing CSV, wrap any field containing a comma in double quotes.
 - **Smart quotes.** If your software auto-converts `"` to `"` or `–` to `—`, that's usually fine for prose but not for the `id` columns. Keep IDs ASCII.
-- **Blank required fields.** `id`, `common`, `scientific`, `family`, `order`, `habitat`, `range`, `size`, `color`, `quickId`, `habitatNotes` are required. The page may render but will look broken if they're missing.
+- **Blank required fields.** `id`, `common`, `scientific`, `family`, `order`, `habitat`, `range`, `size`, `quickId`, `habitatNotes` are required. The page may render but will look broken if they're missing.
 
 ---
 

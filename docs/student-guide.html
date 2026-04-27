@@ -212,12 +212,13 @@ Trails along baseboards and counters</pre>
 <tr><td><code>name</code></td><td>Display name (<code>Indoor Insects</code>).</td></tr>
 <tr><td><code>sciName</code></td><td>Scientific subtitle, often a higher-level taxon or descriptor.</td></tr>
 <tr><td><code>blurb</code></td><td>One sentence describing the project. Shown on the homepage tile.</td></tr>
-<tr><td><code>swatch</code></td><td>A hex color (<code>#8E6F3E</code>) used as the placeholder tile background.</td></tr>
 <tr><td><code>pattern</code></td><td>One of <code>diagonal</code>, <code>stipple</code>, <code>weave</code>, <code>grain</code>, <code>wing</code>, <code>web</code>, <code>hex</code>, <code>scale</code>.</td></tr>
 <tr><td><code>image</code></td><td>Leave blank.</td></tr>
 <tr><td><code>status</code></td><td><code>active</code> for live projects; <code>planned</code> for placeholders.</td></tr>
 </tbody>
 </table>
+
+<p style="font-size:9.5pt; color:#6F727B; margin-top:-6pt;">The placeholder tile color is auto-derived from the <code>id</code> — no need to enter it.</p>
 
 <h3>groups sheet</h3>
 <p>One row per group within a project.</p>
@@ -229,7 +230,6 @@ Trails along baseboards and counters</pre>
 <tr><td><code>name</code></td><td>Display name.</td></tr>
 <tr><td><code>sciName</code></td><td>Scientific name (<code>Formicidae</code>).</td></tr>
 <tr><td><code>blurb</code></td><td>One sentence about the group.</td></tr>
-<tr><td><code>swatch</code></td><td>Hex color for placeholder.</td></tr>
 <tr><td><code>pattern</code></td><td>Same options as projects.</td></tr>
 <tr><td><code>image</code></td><td>Leave blank.</td></tr>
 </tbody>
@@ -248,7 +248,6 @@ Trails along baseboards and counters</pre>
 <tr><td><code>habitat</code></td><td>The categorical filter — <code>In Homes</code>, <code>Stored Products</code>, <code>Around Structures</code>, <code>Structural</code>, etc. <strong>Be consistent across the project</strong> — these become the filter chips on the group page.</td></tr>
 <tr><td><code>range</code></td><td>One-line geographic range (<code>Statewide</code>, <code>Southern Indiana</code>).</td></tr>
 <tr><td><code>size</code></td><td>Adult body size with units (<code>6–13 mm</code>).</td></tr>
-<tr><td><code>color</code></td><td>Hex color for placeholder when no photo.</td></tr>
 <tr><td><code>tags</code></td><td>Multi-line. Short labels.</td></tr>
 <tr><td><code>quickId</code></td><td>Multi-line. 3–5 short identification points.</td></tr>
 <tr><td><code>habitatNotes</code></td><td>Paragraph: where and when this species turns up, what signals its presence.</td></tr>
@@ -308,7 +307,7 @@ Trails along baseboards and counters</pre>
   <li><strong>Inconsistent <code>habitat</code> values.</strong> If three students each invent a slightly different label (<code>In homes</code> vs. <code>In Homes</code> vs. <code>Indoor</code>), they all become separate filter chips. Decide on the canonical labels with your group before you start.</li>
   <li><strong>Commas inside cells.</strong> Spreadsheets handle this automatically when exporting to CSV — but if you're hand-writing CSV, wrap any field containing a comma in double quotes.</li>
   <li><strong>Smart quotes.</strong> If your software auto-converts <code>"</code> to <code>“</code> or <code>-</code> to <code>—</code>, that's usually fine for prose but not for the <code>id</code> columns. Keep IDs ASCII.</li>
-  <li><strong>Blank required fields.</strong> <code>id</code>, <code>common</code>, <code>scientific</code>, <code>family</code>, <code>order</code>, <code>habitat</code>, <code>range</code>, <code>size</code>, <code>color</code>, <code>quickId</code>, <code>habitatNotes</code> are required.</li>
+  <li><strong>Blank required fields.</strong> <code>id</code>, <code>common</code>, <code>scientific</code>, <code>family</code>, <code>order</code>, <code>habitat</code>, <code>range</code>, <code>size</code>, <code>quickId</code>, <code>habitatNotes</code> are required.</li>
 </ul>
 
 <div class="footer">
