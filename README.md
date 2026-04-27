@@ -125,6 +125,10 @@ Typography stack (loaded via `next/font` in `app/layout.jsx`):
 - **Image fallback.** When a species/group/project image is missing or 404s, the `Plate` component falls back to the striped placeholder.
 - **Sticky in-page nav.** The species page has a 6-section sticky nav with smooth scroll and active-section tracking.
 
+## For AI/agent collaborators
+
+[`CLAUDE.md`](CLAUDE.md) at the repo root is the orientation doc Claude Code (and similar agents) auto-loads at session start — architecture, conventions, common workflows, and the small list of things that are intentional and shouldn't be reverted. Keep it tight when updating.
+
 ## Notes for future maintainers
 
 - The data loader (`lib/data.js`) normalizes any legacy `assets/...` image path the prototype used by stripping the prefix. New entries should use root-relative paths (`/images/...`).
