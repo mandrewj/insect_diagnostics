@@ -8,8 +8,7 @@
       "swatch": "#8E6F3E",
       "pattern": "diagonal",
       "image": "/images/projects/indoor-insects/cover.jpg",
-      "status": "active",
-      "groupCount": 8
+      "status": "active"
     },
     {
       "id": "lawn-garden",
@@ -19,8 +18,7 @@
       "swatch": "#6B7A3A",
       "pattern": "grain",
       "image": "/images/projects/lawn-garden/cover.jpg",
-      "status": "planned",
-      "groupCount": 0
+      "status": "planned"
     },
     {
       "id": "beetles-of-indiana",
@@ -30,8 +28,7 @@
       "swatch": "#3a2a1a",
       "pattern": "stipple",
       "image": "/images/projects/beetles-of-indiana/cover.jpg",
-      "status": "planned",
-      "groupCount": 0
+      "status": "planned"
     }
   ]
 }

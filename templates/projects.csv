@@ -1,0 +1,4 @@
+id,name,sciName,blurb,swatch,pattern,image,status
+indoor-insects,Indoor Insects,Pests of homes and structures,"Insects, arachnids, and small invertebrates that turn up indoors. Identification, habitat, and management for the species most frequently encountered.",#8E6F3E,diagonal,/images/projects/indoor-insects/cover.jpg,active
+lawn-garden,Lawn & Garden Insects,Pests and beneficials of turf and ornamentals,"Beetles, caterpillars, true bugs, and pollinators across residential lawns, vegetable plots, and ornamental beds.",#6B7A3A,grain,/images/projects/lawn-garden/cover.jpg,planned
+beetles-of-indiana,Beetles of Indiana,Coleoptera,"Field reference to the beetle families and conspicuous species recorded across Indiana, with emphasis on diagnostic external characters.",#3a2a1a,stipple,/images/projects/beetles-of-indiana/cover.jpg,planned

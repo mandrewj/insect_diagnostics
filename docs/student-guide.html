@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Insect Diagnostics — Student Data Entry Guide</title>
+<style>
+  @page { size: letter; margin: 0.75in 0.85in; }
+  html, body {
+    margin: 0; padding: 0;
+    background: #FAF8F4;
+    color: #0A0A0B;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 11pt;
+    line-height: 1.5;
+  }
+  h1 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 28pt;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    color: #0A0A0B;
+    margin: 0 0 4pt;
+    line-height: 1.1;
+  }
+  h1 .em { color: #8E6F3E; font-style: italic; font-weight: normal; }
+  h2 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 16pt;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #0A0A0B;
+    margin: 28pt 0 10pt;
+    padding-left: 10pt;
+    border-left: 3pt solid #CFB991;
+    page-break-after: avoid;
+  }
+  h3 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 12pt;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #555960;
+    margin: 18pt 0 6pt;
+    page-break-after: avoid;
+  }
+  p { margin: 0 0 9pt; }
+  a { color: #8E6F3E; text-decoration: none; border-bottom: 0.5pt solid #CFB991; }
+  code, pre, kbd {
+    font-family: "Menlo", "Courier New", monospace;
+    font-size: 9.5pt;
+  }
+  pre {
+    background: #F2EEE5;
+    border-left: 3pt solid #CFB991;
+    padding: 8pt 12pt;
+    margin: 8pt 0 12pt;
+    line-height: 1.4;
+    white-space: pre-wrap;
+    page-break-inside: avoid;
+  }
+  code { background: #F2EEE5; padding: 1pt 3pt; }
+  pre code { background: transparent; padding: 0; }
+  ul, ol { margin: 0 0 10pt; padding-left: 18pt; }
+  li { margin-bottom: 3pt; }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 6pt 0 14pt;
+    font-size: 10pt;
+    page-break-inside: auto;
+  }
+  th, td {
+    border-bottom: 0.5pt solid #d9d3c4;
+    padding: 5pt 8pt;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: #F2EEE5;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 8.5pt;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #555960;
+    border-bottom: 1pt solid #CFB991;
+  }
+  td code { font-size: 9pt; }
+
+  .lede { font-size: 11pt; color: #555960; margin-bottom: 14pt; }
+  .eyebrow {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 8.5pt;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #8E6F3E;
+    margin-bottom: 4pt;
+  }
+  .footer {
+    margin-top: 28pt;
+    padding-top: 10pt;
+    border-top: 0.5pt solid #d9d3c4;
+    font-size: 9pt;
+    color: #6F727B;
+  }
+  hr {
+    border: 0;
+    border-top: 0.5pt solid #d9d3c4;
+    margin: 22pt 0;
+  }
+  .callout {
+    background: #fff;
+    border: 0.5pt solid #d9d3c4;
+    border-left: 3pt solid #DAAA00;
+    padding: 10pt 14pt;
+    margin: 10pt 0 14pt;
+    font-size: 10pt;
+    page-break-inside: avoid;
+  }
+  .callout .k {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 8pt;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #8E6F3E;
+    display: block;
+    margin-bottom: 4pt;
+  }
+</style>
+</head>
+<body>
+
+<div class="eyebrow">Purdue Extension Entomology · Diagnostics Library</div>
+<h1>Student Data Entry <span class="em">Guide</span></h1>
+<p class="lede">Welcome. Your task is to fill in spreadsheet data for an entomology diagnostics project. The data you enter will be turned into a real, public website. This guide walks you through the spreadsheet workflow, the five sheets you'll work with, and how to submit your work.</p>
+
+<h2>How the data flows</h2>
+<pre>
+   ┌──────────────────────────┐
+   │  YOU edit 5 spreadsheets │
+   └─────────────┬────────────┘
+                 │  export as CSV
+                 ▼
+   ┌──────────────────────────┐
+   │  Instructor runs script  │   npm run import-csv
+   │  CSV → JSON              │
+   └─────────────┬────────────┘
+                 │  push to GitHub
+                 ▼
+   ┌──────────────────────────┐
+   │  Site rebuilds on Vercel │
+   └──────────────────────────┘
+</pre>
+<p>You'll work in five sheets — they are <strong>linked to each other through ID columns</strong>. Get the IDs right and everything else falls into place.</p>
+
+<table>
+<thead><tr><th style="width: 25%">Sheet</th><th style="width: 40%">What it holds</th><th>Linked to</th></tr></thead>
+<tbody>
+<tr><td><strong>projects</strong></td><td>Top-level projects (e.g. <em>Indoor Insects</em>)</td><td>—</td></tr>
+<tr><td><strong>groups</strong></td><td>Categories within a project (e.g. <em>Ants</em>)</td><td><code>project_id</code> → projects.id</td></tr>
+<tr><td><strong>species</strong></td><td>Individual species records</td><td><code>project_id</code>, <code>group_id</code></td></tr>
+<tr><td><strong>lookalikes</strong></td><td>Pairs of species commonly confused with each other</td><td><code>project_id</code>, <code>species_id</code>, <code>lookalike_id</code></td></tr>
+<tr><td><strong>references</strong></td><td>Linked publications for a species</td><td><code>project_id</code>, <code>species_id</code></td></tr>
+</tbody>
+</table>
+
+<p>A copy of all five sheets, pre-filled with the existing <em>Indoor Insects</em> dataset as a worked example, lives in the repo at <code>templates/</code>. Use those as your starting point.</p>
+
+<hr>
+
+<h2>Working in the spreadsheet</h2>
+
+<h3>IDs are the glue</h3>
+<p>Every project, group, and species needs an <strong><code>id</code></strong> — a short, lowercase, URL-safe slug like <code>carpenter-ant</code> or <code>bed-bugs</code>. The id is what shows up in the website's URL (<code>/p/indoor-insects/g/ants/s/carpenter-ant</code>), so:</p>
+<ul>
+  <li>Lowercase only.</li>
+  <li>Use hyphens (<code>-</code>), never spaces or underscores.</li>
+  <li>No accents or special characters.</li>
+  <li>Pick one and don't change it later — you'd break links.</li>
+</ul>
+<p>The <code>groups</code> sheet has a <code>project_id</code> column that <strong>must match exactly</strong> an <code>id</code> in the <code>projects</code> sheet. Same for <code>species</code>: its <code>project_id</code> and <code>group_id</code> must match real entries upstream.</p>
+
+<h3>Multi-line cells (tags, quick-ID points)</h3>
+<p>Two columns hold lists, not single values: <code>tags</code> and <code>quickId</code>.</p>
+<p>In a spreadsheet, <strong>press <kbd>Alt+Enter</kbd> (Windows) or <kbd>Option+Enter</kbd> (Mac) inside a cell to add a new line</strong>. Each line becomes a separate item.</p>
+<p>Example for <code>quickId</code>:</p>
+<pre>Single, hidden node on petiole
+Even, brown-black body color
+Crushed workers smell of rotten coconut
+Trails along baseboards and counters</pre>
+<p>That's one cell with four lines. Don't put commas between items — newlines only. (If your spreadsheet won't let you do newlines, you can use the pipe character <code>|</code> instead: <code>Trail-forming|Sweet-feeding</code>.)</p>
+
+<h3>Long prose (habitatNotes, management, additionalNotes)</h3>
+<p>These are paragraph-length text fields. Just type into the cell as a single block of prose. Press <kbd>Alt+Enter</kbd> if you want a paragraph break inside the field — the site will render the break as a real paragraph.</p>
+
+<h3>Images</h3>
+<p>Leave the <code>image</code> and <code>imageCredit</code> columns <strong>blank</strong> unless your instructor tells you otherwise. The instructor will upload photos and update those fields separately. The site automatically falls back to a striped placeholder when an image isn't set.</p>
+
+<hr>
+
+<h2>Field reference</h2>
+
+<h3>projects sheet</h3>
+<p>One row per top-level project.</p>
+<table>
+<thead><tr><th style="width:20%">Column</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><code>id</code></td><td>URL-safe slug (<code>indoor-insects</code>, <code>lawn-garden</code>).</td></tr>
+<tr><td><code>name</code></td><td>Display name (<code>Indoor Insects</code>).</td></tr>
+<tr><td><code>sciName</code></td><td>Scientific subtitle, often a higher-level taxon or descriptor.</td></tr>
+<tr><td><code>blurb</code></td><td>One sentence describing the project. Shown on the homepage tile.</td></tr>
+<tr><td><code>swatch</code></td><td>A hex color (<code>#8E6F3E</code>) used as the placeholder tile background.</td></tr>
+<tr><td><code>pattern</code></td><td>One of <code>diagonal</code>, <code>stipple</code>, <code>weave</code>, <code>grain</code>, <code>wing</code>, <code>web</code>, <code>hex</code>, <code>scale</code>.</td></tr>
+<tr><td><code>image</code></td><td>Leave blank.</td></tr>
+<tr><td><code>status</code></td><td><code>active</code> for live projects; <code>planned</code> for placeholders.</td></tr>
+</tbody>
+</table>
+
+<h3>groups sheet</h3>
+<p>One row per group within a project.</p>
+<table>
+<thead><tr><th style="width:20%">Column</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><code>project_id</code></td><td>Must match an id from the projects sheet.</td></tr>
+<tr><td><code>id</code></td><td>URL-safe slug (<code>ants</code>, <code>bed-bugs</code>).</td></tr>
+<tr><td><code>name</code></td><td>Display name.</td></tr>
+<tr><td><code>sciName</code></td><td>Scientific name (<code>Formicidae</code>).</td></tr>
+<tr><td><code>blurb</code></td><td>One sentence about the group.</td></tr>
+<tr><td><code>swatch</code></td><td>Hex color for placeholder.</td></tr>
+<tr><td><code>pattern</code></td><td>Same options as projects.</td></tr>
+<tr><td><code>image</code></td><td>Leave blank.</td></tr>
+</tbody>
+</table>
+
+<h3>species sheet</h3>
+<p>One row per species. This is where most of your work happens.</p>
+<table>
+<thead><tr><th style="width:22%">Column</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><code>project_id</code>, <code>group_id</code></td><td>Must match real upstream entries.</td></tr>
+<tr><td><code>id</code></td><td>Slug — usually the common name lowercased and hyphenated.</td></tr>
+<tr><td><code>common</code></td><td>Common name.</td></tr>
+<tr><td><code>scientific</code></td><td>Scientific name, no italics (the site adds them).</td></tr>
+<tr><td><code>family</code>, <code>order</code></td><td>Taxonomic family and order.</td></tr>
+<tr><td><code>habitat</code></td><td>The categorical filter — <code>In Homes</code>, <code>Stored Products</code>, <code>Around Structures</code>, <code>Structural</code>, etc. <strong>Be consistent across the project</strong> — these become the filter chips on the group page.</td></tr>
+<tr><td><code>range</code></td><td>One-line geographic range (<code>Statewide</code>, <code>Southern Indiana</code>).</td></tr>
+<tr><td><code>size</code></td><td>Adult body size with units (<code>6–13 mm</code>).</td></tr>
+<tr><td><code>color</code></td><td>Hex color for placeholder when no photo.</td></tr>
+<tr><td><code>tags</code></td><td>Multi-line. Short labels.</td></tr>
+<tr><td><code>quickId</code></td><td>Multi-line. 3–5 short identification points.</td></tr>
+<tr><td><code>habitatNotes</code></td><td>Paragraph: where and when this species turns up, what signals its presence.</td></tr>
+<tr><td><code>management</code></td><td>Paragraph: control approach. <strong>Optional</strong> — leave blank if you don't have notes; the section auto-hides.</td></tr>
+<tr><td><code>additionalNotes</code></td><td>Optional free-form prose rendered at the bottom. Skip if not needed.</td></tr>
+<tr><td><code>image</code>, <code>imageCredit</code></td><td>Leave blank.</td></tr>
+</tbody>
+</table>
+
+<h3>lookalikes sheet</h3>
+<p>One row per <em>directional</em> pair. If species A is commonly confused with species B, add <strong>two rows</strong>: one A→B, one B→A. The site only shows lookalikes pointing outward from the species you're viewing.</p>
+<table>
+<thead><tr><th style="width:25%">Column</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><code>project_id</code></td><td>Must match a project.</td></tr>
+<tr><td><code>species_id</code></td><td>The species you're on.</td></tr>
+<tr><td><code>lookalike_id</code></td><td>A species id (in the same project) that's commonly confused with it.</td></tr>
+</tbody>
+</table>
+
+<h3>references sheet</h3>
+<p>One row per reference. Optional — leave the sheet empty if a species has no linked publications.</p>
+<table>
+<thead><tr><th style="width:25%">Column</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><code>project_id</code>, <code>species_id</code></td><td>Which species this reference belongs to.</td></tr>
+<tr><td><code>source</code></td><td>The publishing body (<code>Purdue Extension</code>).</td></tr>
+<tr><td><code>label</code></td><td>The publication title.</td></tr>
+<tr><td><code>url</code></td><td>Direct link to the document or page.</td></tr>
+<tr><td><code>n</code></td><td>Publication number, if any (<code>E-26</code>).</td></tr>
+</tbody>
+</table>
+
+<hr>
+
+<h2>Submitting your work</h2>
+<p>When you're done editing, your instructor will tell you which of these to do:</p>
+
+<div class="callout">
+  <span class="k">Option A — Single Google Sheet</span>
+  Share the sheet with your instructor (View access is fine). They will export each tab to CSV and import.
+</div>
+
+<div class="callout">
+  <span class="k">Option B — Five CSV files</span>
+  From your spreadsheet, export each sheet as a <code>.csv</code> file (in Google Sheets: <em>File → Download → Comma-separated values</em>). Send the five files to your instructor.
+</div>
+
+<div class="callout">
+  <span class="k">Option C — Direct repo edit (advanced)</span>
+  If you have GitHub access, replace the files in <code>templates/</code> with your CSVs, run <code>npm run import-csv</code>, commit, and push. The site updates when Vercel finishes its build.
+</div>
+
+<h2>Common pitfalls</h2>
+<ul>
+  <li><strong>Mismatched IDs.</strong> A typo in <code>species.project_id</code> that doesn't appear in <code>projects.id</code> means the species silently won't render. Double-check every <code>*_id</code> column.</li>
+  <li><strong>Inconsistent <code>habitat</code> values.</strong> If three students each invent a slightly different label (<code>In homes</code> vs. <code>In Homes</code> vs. <code>Indoor</code>), they all become separate filter chips. Decide on the canonical labels with your group before you start.</li>
+  <li><strong>Commas inside cells.</strong> Spreadsheets handle this automatically when exporting to CSV — but if you're hand-writing CSV, wrap any field containing a comma in double quotes.</li>
+  <li><strong>Smart quotes.</strong> If your software auto-converts <code>"</code> to <code>“</code> or <code>-</code> to <code>—</code>, that's usually fine for prose but not for the <code>id</code> columns. Keep IDs ASCII.</li>
+  <li><strong>Blank required fields.</strong> <code>id</code>, <code>common</code>, <code>scientific</code>, <code>family</code>, <code>order</code>, <code>habitat</code>, <code>range</code>, <code>size</code>, <code>color</code>, <code>quickId</code>, <code>habitatNotes</code> are required.</li>
+</ul>
+
+<div class="footer">
+  Insect Diagnostics · Purdue Insect Diversity &amp; Diagnostics Lab · Department of Entomology<br>
+  Live site: insect-diagnostics.vercel.app · Source: github.com/mandrewj/insect_diagnostics
+</div>
+
+</body>
+</html>

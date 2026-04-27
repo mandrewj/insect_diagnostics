@@ -1,0 +1,9 @@
+project_id,species_id,lookalike_id
+indoor-insects,carpenter-ant,odorous-house-ant
+indoor-insects,odorous-house-ant,pavement-ant
+indoor-insects,odorous-house-ant,carpenter-ant
+indoor-insects,pavement-ant,odorous-house-ant
+indoor-insects,german-cockroach,american-cockroach
+indoor-insects,common-bed-bug,bat-bug
+indoor-insects,bat-bug,common-bed-bug
+indoor-insects,brown-recluse,cellar-spider

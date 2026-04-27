@@ -4,6 +4,8 @@ All copy, species records, and image references live as plain JSON files under t
 
 The site rebuilds automatically when changes are pushed to GitHub. There's no separate publishing step on Vercel.
 
+> **Working from a spreadsheet instead?** The CSV templates at [`/templates`](../templates) plus `npm run import-csv` regenerate every JSON file in this directory from one set of spreadsheets. See [`docs/student-guide.pdf`](../docs/student-guide.pdf) for the full workflow — that's the path used for student data-entry.
+
 ## File layout
 
 ```

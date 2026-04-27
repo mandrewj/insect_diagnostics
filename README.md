@@ -73,10 +73,11 @@ next.config.mjs / package.json / jsconfig.json / .gitignore — Next.js plumbing
 
 All content edits happen under `content/` (text + structure) and `public/images/` (photos). **No code changes are required to add a project, group, or species** — the site rebuilds itself from these files.
 
-Two editor guides, side by side:
+Three editor guides, side by side:
 
 - 📄 **[`content/README.md`](content/README.md)** — full field-by-field JSON schema and worked examples for adding a new project, group, or species.
 - 🖼️ **[`public/images/README.md`](public/images/README.md)** — where to drop photos and how to link them from JSON, with file-format guidance.
+- 📋 **[`docs/student-guide.pdf`](docs/student-guide.pdf)** (also [.md](docs/student-guide.md), [.html](docs/student-guide.html)) — the spreadsheet-first authoring path used for student/cohort data entry. Five CSV templates under [`templates/`](templates/) plus an `npm run import-csv` script that turns them back into the JSON tree.
 
 The short version:
 

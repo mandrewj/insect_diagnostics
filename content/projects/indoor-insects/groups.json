@@ -5,7 +5,6 @@
       "name": "Ants",
       "sciName": "Formicidae",
       "blurb": "Social hymenopterans nesting indoors and outdoors. Identification often hinges on petiole, antennal segments, and odor.",
-      "speciesCount": 8,
       "swatch": "#8E6F3E",
       "pattern": "diagonal",
       "image": "/images/projects/indoor-insects/groups/ants.jpg"
@@ -15,7 +14,6 @@
       "name": "Cockroaches",
       "sciName": "Blattodea",
       "blurb": "Nocturnal scavengers found near food, moisture, and harborage. Pronotal markings and size separate the common indoor species.",
-      "speciesCount": 5,
       "swatch": "#555960",
       "pattern": "stipple",
       "image": "/images/projects/indoor-insects/groups/cockroaches.jpg"
@@ -25,7 +23,6 @@
       "name": "Bed Bugs & Kin",
       "sciName": "Cimicidae",
       "blurb": "Obligate blood-feeders associated with sleeping areas. Size, color, and harborage location guide field identification.",
-      "speciesCount": 3,
       "swatch": "#DAAA00",
       "pattern": "weave",
       "image": "/images/projects/indoor-insects/groups/bedbugs.jpg"
@@ -35,7 +32,6 @@
       "name": "Stored-Product Pests",
       "sciName": "Coleoptera & Lepidoptera",
       "blurb": "Beetles and moths that infest grains, flour, and dry goods. Larval damage is often the first signal.",
-      "speciesCount": 7,
       "swatch": "#CFB991",
       "pattern": "grain",
       "image": "/images/projects/indoor-insects/groups/stored-product.jpg"
@@ -45,7 +41,6 @@
       "name": "Flies & Gnats",
       "sciName": "Diptera",
       "blurb": "Drain, fruit, fungus, and house flies share habits but differ sharply in venation, size, and breeding substrate.",
-      "speciesCount": 6,
       "swatch": "#6F727B",
       "pattern": "wing",
       "image": "/images/projects/indoor-insects/groups/flies.jpg"
@@ -55,7 +50,6 @@
       "name": "Spiders",
       "sciName": "Araneae",
       "blurb": "Most indoor spiders are harmless. Two medically significant species in Indiana require careful, calm identification.",
-      "speciesCount": 6,
       "swatch": "#000000",
       "pattern": "web",
       "image": "/images/projects/indoor-insects/groups/spiders.jpg"
@@ -65,7 +59,6 @@
       "name": "Wasps & Bees",
       "sciName": "Vespidae & Apidae",
       "blurb": "Nest architecture and color pattern carry most of the diagnostic weight when specimens are not in hand.",
-      "speciesCount": 5,
       "swatch": "#C4BFC0",
       "pattern": "hex",
       "image": "/images/projects/indoor-insects/groups/wasps.jpg"
@@ -75,7 +68,6 @@
       "name": "Silverfish & Booklice",
       "sciName": "Zygentoma & Psocodea",
       "blurb": "Small, soft-bodied pests of paper, starch, and damp materials. Often the first sign of moisture problems.",
-      "speciesCount": 4,
       "swatch": "#EBD99F",
       "pattern": "scale",
       "image": "/images/projects/indoor-insects/groups/silverfish.jpg"
