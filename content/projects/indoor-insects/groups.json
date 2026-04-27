@@ -8,7 +8,7 @@
       "speciesCount": 8,
       "swatch": "#8E6F3E",
       "pattern": "diagonal",
-      "image": ""
+      "image": "/images/projects/indoor-insects/groups/ants.jpg"
     },
     {
       "id": "cockroaches",
@@ -18,7 +18,7 @@
       "speciesCount": 5,
       "swatch": "#555960",
       "pattern": "stipple",
-      "image": ""
+      "image": "/images/projects/indoor-insects/groups/cockroaches.jpg"
     },
     {
       "id": "bed-bugs",
@@ -28,7 +28,7 @@
       "speciesCount": 3,
       "swatch": "#DAAA00",
       "pattern": "weave",
-      "image": ""
+      "image": "/images/projects/indoor-insects/groups/bedbugs.jpg"
     },
     {
       "id": "stored-product",
@@ -38,7 +38,7 @@
       "speciesCount": 7,
       "swatch": "#CFB991",
       "pattern": "grain",
-      "image": ""
+      "image": "/images/projects/indoor-insects/groups/stored-product.jpg"
     },
     {
       "id": "flies",
@@ -58,7 +58,7 @@
       "speciesCount": 6,
       "swatch": "#000000",
       "pattern": "web",
-      "image": ""
+      "image": "/images/projects/indoor-insects/groups/spiders.jpg"
     },
     {
       "id": "wasps",
@@ -68,7 +68,7 @@
       "speciesCount": 5,
       "swatch": "#C4BFC0",
       "pattern": "hex",
-      "image": ""
+      "image": "/images/projects/indoor-insects/groups/wasps.jpg"
     },
     {
       "id": "silverfish",
@@ -78,7 +78,7 @@
       "speciesCount": 4,
       "swatch": "#EBD99F",
       "pattern": "scale",
-      "image": ""
+      "image": "/images/projects/indoor-insects/groups/silverfish.jpg"
     }
   ],
   "lookalikes": {

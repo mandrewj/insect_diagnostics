@@ -88,8 +88,7 @@ function Groups({ projectId, groups }) {
           <h2 className="section-title">Browse by group</h2>
         </div>
         <p className="section-sub">
-          Each group collects the species most likely to appear in homes,
-          workplaces, and food-handling environments across Indiana.
+          Each group includes the species most likely to be encountered.
         </p>
       </div>
 
