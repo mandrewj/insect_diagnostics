@@ -1,0 +1,82 @@
+[
+  {
+    "id": "german-cockroach",
+    "common": "German Cockroach",
+    "scientific": "Blattella germanica",
+    "family": "Ectobiidae",
+    "order": "Blattodea",
+    "damage": "In Homes",
+    "habitat": "Kitchen, bath",
+    "range": "Statewide",
+    "size": "13–16 mm",
+    "color": "#7a5a2a",
+    "tags": [
+      "Indoor-only",
+      "Prolific"
+    ],
+    "quickId": [
+      "Two parallel dark stripes on pronotum",
+      "Light tan to caramel body",
+      "Nymphs nearly black with a pale stripe",
+      "Egg case carried by female until hatch"
+    ],
+    "damageNotes": "Allergens and pathogen carriage. Feeds on virtually any organic residue.",
+    "management": "Gel baits, IGRs, sanitation. Monitor with sticky traps in corners along walls.",
+    "image": "",
+    "imageCredit": "",
+    "references": []
+  },
+  {
+    "id": "american-cockroach",
+    "common": "American Cockroach",
+    "scientific": "Periplaneta americana",
+    "family": "Blattidae",
+    "order": "Blattodea",
+    "damage": "Around Structures",
+    "habitat": "Sewers, basements",
+    "range": "Statewide",
+    "size": "35–40 mm",
+    "color": "#5a2a1a",
+    "tags": [
+      "Peridomestic",
+      "Large"
+    ],
+    "quickId": [
+      "Reddish-brown with pale yellow pronotal margin",
+      "Largest common indoor roach",
+      "Adults fly short distances in warm weather",
+      "Associated with sewers, steam tunnels"
+    ],
+    "damageNotes": "Indicator of plumbing or drainage issues. Strong musty odor in heavy infestations.",
+    "management": "Seal floor drains and sewer access. Bait stations in utility chases.",
+    "image": "",
+    "imageCredit": "",
+    "references": []
+  },
+  {
+    "id": "oriental-cockroach",
+    "common": "Oriental Cockroach",
+    "scientific": "Blatta orientalis",
+    "family": "Blattidae",
+    "order": "Blattodea",
+    "damage": "In Homes",
+    "habitat": "Damp basements",
+    "range": "Statewide",
+    "size": "25–30 mm",
+    "color": "#1a1a1a",
+    "tags": [
+      "Cool-tolerant"
+    ],
+    "quickId": [
+      "Glossy near-black body",
+      "Females wingless; males with short wings",
+      "Slow-moving compared to other species",
+      "Strong preference for damp, cool spaces"
+    ],
+    "damageNotes": "Frequent in basements and crawlspaces; signals moisture problems.",
+    "management": "Dehumidify, exclude. Granular baits in voids and along foundations.",
+    "image": "",
+    "imageCredit": "",
+    "references": []
+  }
+]

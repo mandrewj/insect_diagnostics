@@ -1,0 +1,109 @@
+[
+  {
+    "id": "odorous-house-ant",
+    "common": "Odorous House Ant",
+    "scientific": "Tapinoma sessile",
+    "family": "Formicidae",
+    "order": "Hymenoptera",
+    "damage": "In Homes",
+    "habitat": "Kitchen, walls",
+    "range": "Statewide",
+    "size": "2.4–3.3 mm",
+    "color": "#3a3a3e",
+    "tags": [
+      "Trail-forming",
+      "Sweet-feeding"
+    ],
+    "quickId": [
+      "Single, hidden node on petiole",
+      "Even, brown-black body color",
+      "Crushed workers smell of rotten coconut",
+      "Trails along baseboards and counters"
+    ],
+    "damageNotes": "No structural damage. Contaminates exposed food and forms persistent indoor trails, especially after rain pushes colonies inside.",
+    "management": "Sanitation, moisture correction, and slow-acting sugar baits. Avoid repellent sprays that fragment colonies.",
+    "image": "",
+    "imageCredit": "",
+    "references": []
+  },
+  {
+    "id": "carpenter-ant",
+    "common": "Black Carpenter Ant",
+    "scientific": "Camponotus pennsylvanicus",
+    "family": "Formicidae",
+    "order": "Hymenoptera",
+    "damage": "Structural",
+    "habitat": "Damp wood",
+    "range": "Statewide",
+    "size": "6–13 mm",
+    "color": "#1a1a1c",
+    "tags": [
+      "Polymorphic",
+      "Wood-nesting"
+    ],
+    "quickId": [
+      "Single petiole node, evenly rounded thorax",
+      "Workers vary widely in size within a colony",
+      "Coarse golden hairs on gaster",
+      "Sawdust-like frass below galleries"
+    ],
+    "damageNotes": "Excavates galleries in moisture-damaged wood. Damage is structural over years, not days; finding frass is the typical first sign.",
+    "management": "Locate and correct moisture sources. Trace foraging trails back to satellite nests; treat parent colony directly.",
+    "image": "",
+    "imageCredit": "",
+    "references": []
+  },
+  {
+    "id": "pavement-ant",
+    "common": "Pavement Ant",
+    "scientific": "Tetramorium immigrans",
+    "family": "Formicidae",
+    "order": "Hymenoptera",
+    "damage": "Around Structures",
+    "habitat": "Slabs, sidewalks",
+    "range": "Statewide",
+    "size": "2.5–3 mm",
+    "color": "#4a3a2a",
+    "tags": [
+      "Slab-nesting"
+    ],
+    "quickId": [
+      "Two petiole nodes",
+      "Parallel grooves on head and thorax",
+      "Soil mounds along sidewalks and slab edges",
+      "Slow, deliberate trails"
+    ],
+    "damageNotes": "Nuisance only. Soil displacement under slabs occasionally noticeable.",
+    "management": "Granular or gel baits placed near nest entrances. Seal slab cracks to limit indoor entry.",
+    "image": "",
+    "imageCredit": "",
+    "references": []
+  },
+  {
+    "id": "pharaoh-ant",
+    "common": "Pharaoh Ant",
+    "scientific": "Monomorium pharaonis",
+    "family": "Formicidae",
+    "order": "Hymenoptera",
+    "damage": "In Homes",
+    "habitat": "Heated buildings",
+    "range": "Statewide",
+    "size": "1.5–2 mm",
+    "color": "#a87a3a",
+    "tags": [
+      "Budding",
+      "Indoor-only"
+    ],
+    "quickId": [
+      "Yellow to honey-amber body, darker gaster",
+      "Two petiole nodes, 12-segmented antennae with three-segmented club",
+      "Tiny — about 2 mm",
+      "Multiple satellite nests within heated structures"
+    ],
+    "damageNotes": "Critical concern in hospitals and food-handling facilities. Sprays cause budding and worsen infestations.",
+    "management": "Bait-only programs across the entire structure. Never use repellent contact insecticides.",
+    "image": "",
+    "imageCredit": "",
+    "references": []
+  }
+]

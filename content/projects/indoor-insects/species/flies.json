@@ -1,0 +1,54 @@
+[
+  {
+    "id": "fruit-fly",
+    "common": "Fruit Fly",
+    "scientific": "Drosophila spp.",
+    "family": "Drosophilidae",
+    "order": "Diptera",
+    "damage": "In Homes",
+    "habitat": "Kitchen",
+    "range": "Statewide",
+    "size": "3 mm",
+    "color": "#a05a2a",
+    "tags": [
+      "Fermentation"
+    ],
+    "quickId": [
+      "Bright red eyes",
+      "Tan to yellow-brown body",
+      "Slow, hovering flight near ripe fruit and drains",
+      "Larvae in fermenting organic film"
+    ],
+    "damageNotes": "Indicator of fermenting matter — overripe fruit, beer/soda residue, organic film in drains.",
+    "management": "Remove breeding material. Drain cleaning gels for biofilm. Apple-cider-vinegar traps as monitors.",
+    "image": "",
+    "imageCredit": "",
+    "references": []
+  },
+  {
+    "id": "drain-fly",
+    "common": "Drain Fly",
+    "scientific": "Psychodidae",
+    "family": "Psychodidae",
+    "order": "Diptera",
+    "damage": "In Homes",
+    "habitat": "Drains",
+    "range": "Statewide",
+    "size": "2 mm",
+    "color": "#4a4a4e",
+    "tags": [
+      "Biofilm"
+    ],
+    "quickId": [
+      "Heart-shaped, fuzzy wings held roof-like",
+      "Body and wings densely hairy ('moth fly')",
+      "Weak fluttering flight near drains and sumps",
+      "Larvae in drain biofilm"
+    ],
+    "damageNotes": "No bite, no disease, but presence indicates standing biofilm.",
+    "management": "Mechanical drain brushing followed by enzyme/bacterial drain gels. Chemical drain cleaners alone do not work.",
+    "image": "",
+    "imageCredit": "",
+    "references": []
+  }
+]

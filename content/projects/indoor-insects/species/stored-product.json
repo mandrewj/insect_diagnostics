@@ -1,0 +1,54 @@
+[
+  {
+    "id": "indianmeal-moth",
+    "common": "Indianmeal Moth",
+    "scientific": "Plodia interpunctella",
+    "family": "Pyralidae",
+    "order": "Lepidoptera",
+    "damage": "Stored Products",
+    "habitat": "Pantry, grain",
+    "range": "Statewide",
+    "size": "8–10 mm",
+    "color": "#a07a4a",
+    "tags": [
+      "Webbing"
+    ],
+    "quickId": [
+      "Forewing two-toned: pale base, coppery outer two-thirds",
+      "Resting moths held tent-like over body",
+      "Larvae produce silk webbing in food",
+      "Often first noticed flying around lights"
+    ],
+    "damageNotes": "Larvae contaminate grains, dried fruit, pet food, and birdseed with frass and webbing.",
+    "management": "Find and discard the source — every package. Pheromone traps confirm eradication, not control.",
+    "image": "",
+    "imageCredit": "",
+    "references": []
+  },
+  {
+    "id": "sawtoothed-grain-beetle",
+    "common": "Sawtoothed Grain Beetle",
+    "scientific": "Oryzaephilus surinamensis",
+    "family": "Silvanidae",
+    "order": "Coleoptera",
+    "damage": "Stored Products",
+    "habitat": "Stored grain",
+    "range": "Statewide",
+    "size": "2.5–3 mm",
+    "color": "#5a3a1a",
+    "tags": [
+      "Secondary feeder"
+    ],
+    "quickId": [
+      "Six tooth-like projections on each side of pronotum",
+      "Slender, flattened body",
+      "Cannot fly indoors",
+      "Adults long-lived; populations build slowly"
+    ],
+    "damageNotes": "Cannot attack whole sound kernels; thrives on broken grain, flour, cereal, dried fruit.",
+    "management": "Discard infested product, vacuum shelves, use sealed containers.",
+    "image": "",
+    "imageCredit": "",
+    "references": []
+  }
+]

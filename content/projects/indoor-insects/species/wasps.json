@@ -1,0 +1,54 @@
+[
+  {
+    "id": "paper-wasp",
+    "common": "Northern Paper Wasp",
+    "scientific": "Polistes fuscatus",
+    "family": "Vespidae",
+    "order": "Hymenoptera",
+    "damage": "Around Structures",
+    "habitat": "Eaves, sheds",
+    "range": "Statewide",
+    "size": "16–20 mm",
+    "color": "#6a3a1a",
+    "tags": [
+      "Social"
+    ],
+    "quickId": [
+      "Open, single-comb umbrella nest hung by a stalk",
+      "Slender, long-legged in flight; legs trail",
+      "Reddish-brown with yellow markings, variable",
+      "Calm unless nest is disturbed"
+    ],
+    "damageNotes": "Stings painful but colonies small. Annual nests, abandoned each fall.",
+    "management": "Only treat nests in high-contact areas. Evening application; freeze-style aerosols.",
+    "image": "",
+    "imageCredit": "",
+    "references": []
+  },
+  {
+    "id": "yellowjacket",
+    "common": "Eastern Yellowjacket",
+    "scientific": "Vespula maculifrons",
+    "family": "Vespidae",
+    "order": "Hymenoptera",
+    "damage": "Around Structures",
+    "habitat": "Ground nests",
+    "range": "Statewide",
+    "size": "12–17 mm",
+    "color": "#DAAA00",
+    "tags": [
+      "Aggressive"
+    ],
+    "quickId": [
+      "Bright yellow and black banding, no body hair",
+      "Enclosed nest in ground cavity, wall void, or tree base",
+      "Aggressive defense within 3–4 m of nest",
+      "Late-summer scavenging at picnics"
+    ],
+    "damageNotes": "Significant sting hazard; multiple stings possible. Allergic reactions are a real risk.",
+    "management": "Mark entrance during daylight; treat at night. Professional removal for wall-void nests.",
+    "image": "",
+    "imageCredit": "",
+    "references": []
+  }
+]

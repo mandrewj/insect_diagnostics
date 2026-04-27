@@ -1,0 +1,37 @@
+{
+  "projects": [
+    {
+      "id": "indoor-insects",
+      "name": "Indoor Insects",
+      "sciName": "Pests of homes and structures",
+      "blurb": "Insects, arachnids, and small invertebrates that turn up indoors. Identification, habitat, and management for the species most often submitted to extension offices.",
+      "swatch": "#8E6F3E",
+      "pattern": "diagonal",
+      "image": "",
+      "status": "active",
+      "groupCount": 8
+    },
+    {
+      "id": "lawn-garden",
+      "name": "Lawn & Garden Insects",
+      "sciName": "Pests and beneficials of turf and ornamentals",
+      "blurb": "Beetles, caterpillars, true bugs, and pollinators across residential lawns, vegetable plots, and ornamental beds.",
+      "swatch": "#6B7A3A",
+      "pattern": "grain",
+      "image": "",
+      "status": "planned",
+      "groupCount": 0
+    },
+    {
+      "id": "beetles-of-indiana",
+      "name": "Beetles of Indiana",
+      "sciName": "Coleoptera",
+      "blurb": "Field reference to the beetle families and conspicuous species recorded across Indiana, with emphasis on diagnostic external characters.",
+      "swatch": "#3a2a1a",
+      "pattern": "stipple",
+      "image": "",
+      "status": "planned",
+      "groupCount": 0
+    }
+  ]
+}

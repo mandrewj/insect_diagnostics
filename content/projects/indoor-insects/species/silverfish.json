@@ -1,0 +1,54 @@
+[
+  {
+    "id": "silverfish",
+    "common": "Silverfish",
+    "scientific": "Lepisma saccharinum",
+    "family": "Lepismatidae",
+    "order": "Zygentoma",
+    "damage": "In Homes",
+    "habitat": "Damp areas",
+    "range": "Statewide",
+    "size": "12–19 mm",
+    "color": "#9a9a9e",
+    "tags": [
+      "Wingless"
+    ],
+    "quickId": [
+      "Tapered, fish-shaped body with metallic silver scales",
+      "Three long tail filaments, two long antennae",
+      "Rapid, fish-like darting movement",
+      "Active at night in bathrooms, basements, attics"
+    ],
+    "damageNotes": "Surface grazing on starches, sizing in book bindings, wallpaper paste, stored paper.",
+    "management": "Reduce humidity below 50%. Sticky monitors confirm activity. Long-lived; control is gradual.",
+    "image": "",
+    "imageCredit": "",
+    "references": []
+  },
+  {
+    "id": "booklouse",
+    "common": "Booklouse",
+    "scientific": "Liposcelis spp.",
+    "family": "Liposcelididae",
+    "order": "Psocodea",
+    "damage": "In Homes",
+    "habitat": "Damp storage",
+    "range": "Statewide",
+    "size": "1–2 mm",
+    "color": "#c0a890",
+    "tags": [
+      "Tiny"
+    ],
+    "quickId": [
+      "Translucent pale-tan body, soft-bodied",
+      "About the size of a pinhead",
+      "Wingless indoor forms most common",
+      "Found on damp paper, behind wallpaper, in pantries"
+    ],
+    "damageNotes": "Feeds on microscopic mold, not the paper itself. A moisture problem in disguise.",
+    "management": "Dehumidify. The mold disappears, the booklice follow. No insecticide needed in most cases.",
+    "image": "",
+    "imageCredit": "",
+    "references": []
+  }
+]

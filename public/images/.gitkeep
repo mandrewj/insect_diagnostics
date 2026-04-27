@@ -1,0 +1,16 @@
+# Drop curated photos in this directory tree.
+#
+#   public/images/projects/<projectId>/cover.jpg                      project tile cover
+#   public/images/projects/<projectId>/groups/<groupId>.jpg           group tile hero
+#   public/images/projects/<projectId>/species/<speciesId>.jpg        primary species plate
+#
+# Reference these from JSON content using a root-relative path, e.g.
+#   "image": "/images/projects/indoor-insects/species/odorous-house-ant.jpg"
+#
+# A leading "assets/" prefix on any image path is stripped automatically
+# (the prototype data used "assets/images/..." paths). New entries should
+# use the "/images/..." form above.
+#
+# Empty / missing files render as the striped placeholder, so this
+# directory can stay empty during editing — fill it in as photos are
+# cleared for use.
