@@ -56,7 +56,8 @@ The site falls back to the striped placeholder — it won't break. So:
 
 - **Format:** JPEG for photos, PNG only when transparency or sharp edges matter.
 - **Aspect ratio:** species plates render at 4:3; group tiles at roughly 14:9; project covers at roughly 16:10. Anything close works — the layout uses `object-fit: cover`.
-- **Resolution:** ~1600px on the long edge is plenty. The browser will scale down. Files larger than a few MB hurt page-load on slow connections.
+- **You don't need to pre-resize.** The site uses Next.js's image optimizer on Vercel: every photo is automatically resized to several widths (mobile/tablet/desktop), converted to WebP or AVIF when the browser supports it, and cached on the CDN. Drop the original JPEG in and the platform does the rest.
+- **Soft cap on originals: ~5 MB.** Anything bigger bloats the git repo over time without improving what visitors see (the optimizer downsamples it anyway). If a phone-camera JPEG is 10+ MB, run it through Preview's "Adjust Size" or `sips -Z 2400 input.jpg --out output.jpg` once before committing.
 - **Color & exposure:** the site is editorial cream-on-black; photos look best when they're bright with a neutral or warm cast. Cool/bluish photos clash with the brand palette.
 
 ## Legacy `assets/...` paths

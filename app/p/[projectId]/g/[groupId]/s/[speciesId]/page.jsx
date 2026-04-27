@@ -77,6 +77,7 @@ export default async function SpeciesPage({ params }) {
               label={species.common + " · adult plate"}
               tone={species.color}
               glyph={glyph}
+              sizes="(max-width: 800px) 100vw, 720px"
             />
           </div>
           <div className="species-hero-meta">
