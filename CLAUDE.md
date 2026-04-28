@@ -133,6 +133,20 @@ npm run guide-pdf    # regenerate docs/student-guide.pdf via Chrome headless
 - **References fall back to nothing**, not to placeholder publications. The section auto-hides when empty.
 - **Field tip → PPDL referral.** The "Where Encountered" callout points to https://ag.purdue.edu/department/btny/ppdl/. Don't replace it with auto-generated habitat-based copy.
 - **Management section copy is fixed.** The "Before treating" callout reads the standard pesticide-label guidance ("Read and follow all label instructions…"). It is regulatory boilerplate, not editorial.
+- **Footer is intentionally minimal** — two outbound links only (Plant & Pest Diagnostic Lab, Insect Diversity & Diagnostics Lab at insectid.org) plus the lab attribution. Don't re-add "#" placeholder links ("Recent additions", "Submit a sample", etc.) — they were removed deliberately.
+
+## Security conventions
+
+These are baked into the code; preserve them when editing:
+
+- **External links use `rel="noopener noreferrer"`** whenever `target="_blank"` is set. Always pair the two.
+- **Reference URLs are sanitized** in `lib/data.js` via `safeUrl()` — only `http(s):` and `mailto:` schemes are allowed; anything else (notably `javascript:`) is normalized to `""` and the species page renders the inert-anchor branch. Don't bypass this when adding new URL fields; route them through `safeUrl()`.
+- **CSV-supplied ids are validated** in `scripts/csv-to-json.js` against a kebab-case slug regex (`assertId`) before they're interpolated into filesystem paths. New id-bearing columns must go through `assertId` too.
+- **CompareProvider has a hydration guard** (`hydrated` flag) so the persist-to-localStorage effect doesn't fire before the read-from-localStorage effect lands. Removing the guard would silently wipe stored compare state on every mount — keep it.
+
+## CSV templates and BOM
+
+`templates/*.csv` ship with a UTF-8 BOM so Excel and Numbers open them as UTF-8 (otherwise en-dashes mojibake). The CSV parser in `scripts/csv-to-json.js` strips the BOM before parsing. If you add a new template, keep the BOM. Multi-value cells use the pipe (`|`) separator; newlines are still accepted for backward compatibility.
 
 ## Things still pending
 
