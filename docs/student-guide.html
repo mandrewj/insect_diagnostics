@@ -183,21 +183,35 @@
 </ul>
 <p>The <code>groups</code> sheet has a <code>project_id</code> column that <strong>must match exactly</strong> an <code>id</code> in the <code>projects</code> sheet. Same for <code>species</code>: its <code>project_id</code> and <code>group_id</code> must match real entries upstream.</p>
 
-<h3>Multi-line cells (tags, quick-ID points)</h3>
+<h3>Multi-value cells (tags, quick-ID points)</h3>
 <p>Two columns hold lists, not single values: <code>tags</code> and <code>quickId</code>.</p>
-<p>In a spreadsheet, <strong>press <kbd>Alt+Enter</kbd> (Windows) or <kbd>Option+Enter</kbd> (Mac) inside a cell to add a new line</strong>. Each line becomes a separate item.</p>
+<p><strong>Separate items with the pipe character <code>|</code></strong> (Shift + Backslash on most US keyboards). Type the whole list on one line — no newlines inside the cell.</p>
 <p>Example for <code>quickId</code>:</p>
-<pre>Single, hidden node on petiole
-Even, brown-black body color
-Crushed workers smell of rotten coconut
-Trails along baseboards and counters</pre>
-<p>That's one cell with four lines. Don't put commas between items — newlines only. (If your spreadsheet won't let you do newlines, you can use the pipe character <code>|</code> instead: <code>Trail-forming|Sweet-feeding</code>.)</p>
+<pre>Single, hidden node on petiole|Even, brown-black body color|Crushed workers smell of rotten coconut|Trails along baseboards and counters</pre>
+<p>That's one cell with four pipe-separated items. Each pipe becomes a new bullet on the website. Leading and trailing whitespace on each item is trimmed.</p>
+<p>Don't use commas <em>between</em> items — commas <em>inside</em> an item (e.g. "Single, hidden node on petiole") are fine and will be preserved. Spreadsheets wrap the cell in quotes automatically when exporting to CSV.</p>
+
+<div class="callout">
+  <span class="k">Older format still accepted</span>
+  Earlier templates used <kbd>Alt+Enter</kbd> newlines inside a cell to separate items. The importer still accepts that for backward compatibility, but pipes are now preferred: cells stay single-line, the spreadsheet is easier to read, and exports are cleaner.
+</div>
 
 <h3>Long prose (habitatNotes, management, additionalNotes)</h3>
 <p>These are paragraph-length text fields. Just type into the cell as a single block of prose. Press <kbd>Alt+Enter</kbd> if you want a paragraph break inside the field — the site will render the break as a real paragraph.</p>
+<p>Pipes (<code>|</code>) are <em>only</em> meaningful in <code>tags</code> and <code>quickId</code>. Anywhere else they're just regular punctuation.</p>
 
 <h3>Images</h3>
 <p>Leave the <code>image</code> and <code>imageCredit</code> columns <strong>blank</strong> unless your instructor tells you otherwise. The instructor will upload photos and update those fields separately. The site automatically falls back to a striped placeholder when an image isn't set.</p>
+
+<h3>File encoding (UTF-8)</h3>
+<p>The templates ship as <strong>UTF-8 with a BOM</strong>. That's the standard Unicode encoding; the BOM (a tiny invisible marker at the start of the file) tells Excel and Numbers to open the file as UTF-8 instead of guessing a different character set and mangling characters like en-dashes (<code>–</code>), em-dashes (<code>—</code>), and accented letters.</p>
+<p>Don't change the encoding. Specifically:</p>
+<ul>
+  <li><strong>Excel (Windows):</strong> open with <em>File → Open → Browse</em> (don't double-click — that path can ignore the BOM). When saving, choose <em>CSV UTF-8 (Comma delimited)</em>, not plain "CSV".</li>
+  <li><strong>Excel (Mac) / Numbers:</strong> double-clicking is fine. Pick UTF-8 if asked when exporting.</li>
+  <li><strong>Google Sheets:</strong> the safest path. Upload the template (<em>File → Import → Replace spreadsheet</em>) and download as CSV when done — Google Sheets is UTF-8 throughout.</li>
+</ul>
+<p>If you see characters like <code>Ã—</code> or <code>â€"</code> where en-dashes used to be, the file has been opened in the wrong encoding. Re-open the original template instead of trying to fix the mojibake by hand.</p>
 
 <hr>
 
@@ -248,8 +262,8 @@ Trails along baseboards and counters</pre>
 <tr><td><code>habitat</code></td><td>The categorical filter — <code>In Homes</code>, <code>Stored Products</code>, <code>Around Structures</code>, <code>Structural</code>, etc. <strong>Be consistent across the project</strong> — these become the filter chips on the group page.</td></tr>
 <tr><td><code>range</code></td><td>One-line geographic range (<code>Statewide</code>, <code>Southern Indiana</code>).</td></tr>
 <tr><td><code>size</code></td><td>Adult body size with units (<code>6–13 mm</code>).</td></tr>
-<tr><td><code>tags</code></td><td>Multi-line. Short labels.</td></tr>
-<tr><td><code>quickId</code></td><td>Multi-line. 3–5 short identification points.</td></tr>
+<tr><td><code>tags</code></td><td>Pipe-separated. Short labels (<code>Trail-forming|Sweet-feeding</code>).</td></tr>
+<tr><td><code>quickId</code></td><td>Pipe-separated. 3–5 short identification points joined with <code>|</code>.</td></tr>
 <tr><td><code>habitatNotes</code></td><td>Paragraph: where and when this species turns up, what signals its presence.</td></tr>
 <tr><td><code>management</code></td><td>Paragraph: control approach. <strong>Optional</strong> — leave blank if you don't have notes; the section auto-hides.</td></tr>
 <tr><td><code>additionalNotes</code></td><td>Optional free-form prose rendered at the bottom. Skip if not needed.</td></tr>
@@ -307,6 +321,8 @@ Trails along baseboards and counters</pre>
   <li><strong>Inconsistent <code>habitat</code> values.</strong> If three students each invent a slightly different label (<code>In homes</code> vs. <code>In Homes</code> vs. <code>Indoor</code>), they all become separate filter chips. Decide on the canonical labels with your group before you start.</li>
   <li><strong>Commas inside cells.</strong> Spreadsheets handle this automatically when exporting to CSV — but if you're hand-writing CSV, wrap any field containing a comma in double quotes.</li>
   <li><strong>Smart quotes.</strong> If your software auto-converts <code>"</code> to <code>“</code> or <code>-</code> to <code>—</code>, that's usually fine for prose but not for the <code>id</code> columns. Keep IDs ASCII.</li>
+  <li><strong>Lost the pipe character.</strong> A bare pipe <code>|</code> is what splits items in <code>tags</code> and <code>quickId</code>. If autocorrect rewrites it as something fancier, the importer won't recognize it. The character you want is <kbd>Shift</kbd> + <kbd>\</kbd> on a US keyboard.</li>
+  <li><strong>Mojibake (<code>Ã—</code>, <code>â€"</code>, etc.).</strong> The file was opened in the wrong character encoding. Re-open the original UTF-8 template — see <em>File encoding</em> above.</li>
   <li><strong>Blank required fields.</strong> <code>id</code>, <code>common</code>, <code>scientific</code>, <code>family</code>, <code>order</code>, <code>habitat</code>, <code>range</code>, <code>size</code>, <code>quickId</code>, <code>habitatNotes</code> are required.</li>
 </ul>
 

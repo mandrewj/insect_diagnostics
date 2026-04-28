@@ -16,26 +16,13 @@ export default function Footer() {
           </div>
         </div>
         <div>
-          <h4>Diagnostics</h4>
-          <a href="/">All projects</a>
-          <a href="#">Recent additions</a>
-          <a href="#">Specimen submission</a>
-        </div>
-        <div>
           <h4>Resources</h4>
-          <a href="https://extension.purdue.edu" target="_blank" rel="noopener">
-            Purdue Extension
-          </a>
-          <a href="https://ag.purdue.edu/department/entomology/ppdl/" target="_blank" rel="noopener">
+          <a href="https://ag.purdue.edu/department/btny/ppdl/" target="_blank" rel="noopener noreferrer">
             Plant &amp; Pest Diagnostic Lab
           </a>
-          <a href="#">Field guides</a>
-        </div>
-        <div>
-          <h4>Contact</h4>
-          <a href="#">Ask an entomologist</a>
-          <a href="#">Submit a sample</a>
-          <a href="mailto:extension@purdue.edu">extension@purdue.edu</a>
+          <a href="https://insectid.org" target="_blank" rel="noopener noreferrer">
+            Insect Diversity &amp; Diagnostics Lab
+          </a>
         </div>
       </div>
     </footer>

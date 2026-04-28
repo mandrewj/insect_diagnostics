@@ -1,4 +1,4 @@
-project_id,id,name,sciName,blurb,pattern,image
+﻿project_id,id,name,sciName,blurb,pattern,image
 indoor-insects,ants,Ants,Formicidae,"Social hymenopterans nesting indoors and outdoors. Identification often hinges on petiole, antennal segments, and odor.",diagonal,/images/projects/indoor-insects/groups/ants.jpg
 indoor-insects,cockroaches,Cockroaches,Blattodea,"Nocturnal scavengers found near food, moisture, and harborage. Pronotal markings and size separate the common indoor species.",stipple,/images/projects/indoor-insects/groups/cockroaches.jpg
 indoor-insects,bed-bugs,Bed Bugs & Kin,Cimicidae,"Obligate blood-feeders associated with sleeping areas. Size, color, and harborage location guide field identification.",weave,/images/projects/indoor-insects/groups/bedbugs.jpg

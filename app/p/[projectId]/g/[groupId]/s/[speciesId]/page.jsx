@@ -101,7 +101,7 @@ export default async function SpeciesPage({ params }) {
           <div className="callout" style={{ alignSelf: "center" }}>
             <span className="k">Need help identifying this?</span>
             The Purdue{" "}
-            <a href={PPDL_URL} target="_blank" rel="noopener">
+            <a href={PPDL_URL} target="_blank" rel="noopener noreferrer">
               Plant &amp; Pest Diagnostic Laboratory (PPDL)
             </a>{" "}
             accepts physical and digital specimens for confirmed
@@ -196,7 +196,7 @@ export default async function SpeciesPage({ params }) {
               </>
             );
             return isExternal ? (
-              <a key={i} href={r.url} target="_blank" rel="noopener">
+              <a key={i} href={r.url} target="_blank" rel="noopener noreferrer">
                 {inner}
               </a>
             ) : (

@@ -50,32 +50,45 @@ Every project, group, and species needs an **`id`** — a short, lowercase, URL-
 
 The `groups` sheet has a `project_id` column that **must match exactly** an `id` in the `projects` sheet. Same for `species`: its `project_id` and `group_id` must match real entries upstream.
 
-### Multi-line cells (tags, quick-ID points)
+### Multi-value cells (tags, quick-ID points)
 
 Two columns hold lists, not single values: `tags` and `quickId`.
 
-In a spreadsheet, **press `Alt+Enter` (Windows) or `Option+Enter` (Mac) inside a cell to add a new line**. Each line becomes a separate item.
+**Separate items with the pipe character `|`** (Shift + Backslash on most US keyboards). Type the whole list on one line — no newlines inside the cell.
 
 Example for `quickId`:
 
 ```
-Single, hidden node on petiole
-Even, brown-black body color
-Crushed workers smell of rotten coconut
-Trails along baseboards and counters
+Single, hidden node on petiole|Even, brown-black body color|Crushed workers smell of rotten coconut|Trails along baseboards and counters
 ```
 
-That's one cell with four lines. Don't put commas between items — newlines only.
+That's one cell with four pipe-separated items. Each pipe becomes a new bullet on the website. Trim spaces around the pipes if you like — leading/trailing whitespace on each item is ignored.
 
-(If your spreadsheet won't let you do newlines, you can use the pipe character `|` instead: `Trail-forming|Sweet-feeding`.)
+Don't put commas *between* items as separators — commas inside individual items (like "Single, hidden node on petiole") are fine and will be preserved. A spreadsheet wraps the cell in quotes automatically when it exports to CSV.
+
+> Older templates used `Alt+Enter` newlines inside cells to separate items. The import script still accepts that format for backward compatibility, but pipes are now the recommended approach: cells stay single-line, the spreadsheet is much easier to read, and exporting to CSV produces cleaner files.
 
 ### Long prose (habitatNotes, management, additionalNotes)
 
 These are paragraph-length text fields. Just type into the cell as a single block of prose. Press `Alt+Enter` if you want a paragraph break inside the field — the site will render the break as a real paragraph.
 
+Pipes (`|`) are *only* meaningful in `tags` and `quickId`. In prose fields they're just regular text, so you can type things like "Plodia / Indianmeal moth | a pyralid" without anything weird happening.
+
 ### Images
 
 Leave the `image` and `imageCredit` columns **blank** unless your instructor tells you otherwise. The instructor will upload photos and update those fields separately. The site automatically falls back to a striped placeholder when an image isn't set.
+
+### File encoding (UTF-8)
+
+The templates ship as **UTF-8 with a BOM**. That's the standard Unicode encoding the rest of the world uses; the BOM (a tiny invisible marker at the start of the file) makes Excel and Numbers open the file as UTF-8 instead of guessing the wrong character set and mangling characters like en-dashes (`–`), em-dashes (`—`), and accented letters.
+
+Don't change the encoding. Specifically:
+
+- **Excel (Windows):** open the template with *File → Open → Browse* (don't double-click — that path can ignore the BOM). When you save, choose *CSV UTF-8 (Comma delimited)*, not plain "CSV".
+- **Excel (Mac) / Numbers:** double-clicking is fine. When exporting, pick the UTF-8 CSV option if asked.
+- **Google Sheets:** the safest path. Upload the template (*File → Import → Replace spreadsheet*) and download as CSV when done — Google Sheets is UTF-8 throughout.
+
+If you see characters like `Ã—` or `â€"` appear where en-dashes used to be, the file has been opened in the wrong encoding. Re-open the original template instead of trying to fix the mojibake by hand.
 
 ---
 
@@ -125,8 +138,8 @@ One row per species. This is where most of your work happens.
 | `habitat` | The categorical filter — `In Homes`, `Stored Products`, `Around Structures`, `Structural`, etc. **Be consistent across the project** — these become the filter chips on the group page. |
 | `range` | One-line geographic range (`Statewide`, `Southern Indiana`). |
 | `size` | Adult body size with units (`6–13 mm`). |
-| `tags` | Multi-line. Short labels like `Trail-forming`, `Sweet-feeding`. |
-| `quickId` | Multi-line. 3–5 short identification points. |
+| `tags` | Pipe-separated. Short labels like `Trail-forming|Sweet-feeding`. |
+| `quickId` | Pipe-separated. 3–5 short identification points joined with `|`. |
 | `habitatNotes` | Paragraph: where and when this species turns up, what signals its presence. |
 | `management` | Paragraph: control approach. **Optional** — leave blank if you don't have notes; the section auto-hides. |
 | `additionalNotes` | Optional free-form prose rendered at the bottom. Skip if not needed. |
@@ -174,6 +187,8 @@ When you're done editing, your instructor will tell you which of these to do:
 - **Inconsistent `habitat` values.** If three students each invent a slightly different label (`In homes` vs. `In Homes` vs. `Indoor`), they all become separate filter chips. Decide on the canonical labels with your group before you start.
 - **Commas inside cells.** Spreadsheets handle this automatically when exporting to CSV — but if you're hand-writing CSV, wrap any field containing a comma in double quotes.
 - **Smart quotes.** If your software auto-converts `"` to `"` or `–` to `—`, that's usually fine for prose but not for the `id` columns. Keep IDs ASCII.
+- **Lost the pipe character.** A bare pipe `|` is what splits items in `tags` and `quickId`. If your spreadsheet's autocorrect rewrites it as something fancier, the importer won't recognize it. The character you want is `Shift + \` on a US keyboard.
+- **Mojibake (`Ã—`, `â€"`, etc.).** The file was opened in the wrong character encoding. Re-open the original UTF-8 template — see *File encoding* above.
 - **Blank required fields.** `id`, `common`, `scientific`, `family`, `order`, `habitat`, `range`, `size`, `quickId`, `habitatNotes` are required. The page may render but will look broken if they're missing.
 
 ---

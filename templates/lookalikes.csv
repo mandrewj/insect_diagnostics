@@ -1,4 +1,4 @@
-project_id,species_id,lookalike_id
+﻿project_id,species_id,lookalike_id
 indoor-insects,carpenter-ant,odorous-house-ant
 indoor-insects,odorous-house-ant,pavement-ant
 indoor-insects,odorous-house-ant,carpenter-ant

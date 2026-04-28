@@ -32,6 +32,10 @@ const CONTENT = path.join(ROOT, "content");
 
 // ---- minimal CSV parser (RFC 4180-ish: quoted fields, "" -> ", multiline ok) ----
 function parseCsv(text) {
+  // Strip UTF-8 BOM if present. The templates ship with a BOM so Excel and
+  // Numbers open them as UTF-8 instead of Windows-1252 (which mojibakes
+  // en-dashes like "2.4–3.3 mm").
+  if (text.charCodeAt(0) === 0xfeff) text = text.slice(1);
   const rows = [];
   let row = [];
   let field = "";
@@ -72,15 +76,27 @@ function readCsvIfExists(name) {
   return parseCsv(fs.readFileSync(p, "utf8"));
 }
 
-// Multi-value cells: students may use newlines (Alt+Enter) or pipes — accept both.
+// Multi-value cells use pipes (`a|b|c`). Newlines (Alt+Enter) are still
+// accepted for backward compatibility with older spreadsheets.
 function splitMulti(s) {
   if (!s) return [];
-  return s.split(/\r?\n|\|/).map((x) => x.trim()).filter(Boolean);
+  return s.split(/\||\r?\n/).map((x) => x.trim()).filter(Boolean);
 }
 
 function writeJson(file, data) {
   fs.mkdirSync(path.dirname(file), { recursive: true });
   fs.writeFileSync(file, JSON.stringify(data, null, 2) + "\n");
+}
+
+// Ids land in filesystem paths (e.g. content/projects/<pid>/species/<gid>.json),
+// so reject anything other than a kebab-case slug to keep CSV-supplied values
+// from breaking out of the content tree via "../" or absolute paths.
+const SLUG = /^[a-z0-9][a-z0-9-]*$/;
+function assertId(kind, value) {
+  if (!SLUG.test(value)) {
+    console.error(`✗ invalid ${kind} id ${JSON.stringify(value)} — expected lowercase kebab-case slug.`);
+    process.exit(1);
+  }
 }
 
 function main() {
@@ -93,6 +109,17 @@ function main() {
   if (projects.length === 0) {
     console.error("templates/projects.csv is empty or missing — nothing to import.");
     process.exit(1);
+  }
+
+  for (const p of projects) assertId("project", p.id);
+  for (const g of groups) {
+    assertId("project", g.project_id);
+    assertId("group", g.id);
+  }
+  for (const s of species) {
+    assertId("project", s.project_id);
+    assertId("group", s.group_id);
+    assertId("species", s.id);
   }
 
   // index references by species id (within their project for safety)

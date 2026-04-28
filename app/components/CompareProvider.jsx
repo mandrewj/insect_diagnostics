@@ -9,6 +9,7 @@ const STORAGE_KEY = "id-compare-v1";
 export function CompareProvider({ children }) {
   const [compare, setCompare] = useState([]);
   const [showCompare, setShowCompare] = useState(false);
+  const [hydrated, setHydrated] = useState(false);
 
   // hydrate from localStorage so the compare drawer survives navigation.
   useEffect(() => {
@@ -16,13 +17,17 @@ export function CompareProvider({ children }) {
       const raw = localStorage.getItem(STORAGE_KEY);
       if (raw) setCompare(JSON.parse(raw));
     } catch {}
+    setHydrated(true);
   }, []);
 
+  // Skip the very first run so an empty initial state doesn't briefly
+  // overwrite stored data before the hydrate effect above takes effect.
   useEffect(() => {
+    if (!hydrated) return;
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(compare));
     } catch {}
-  }, [compare]);
+  }, [compare, hydrated]);
 
   const toggleCompare = useCallback((species, projectId, groupId) => {
     setCompare((prev) => {
