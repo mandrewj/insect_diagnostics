@@ -11,6 +11,7 @@
     "guide-pdf": "/Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome --headless=new --disable-gpu --user-data-dir=$(mktemp -d) --no-pdf-header-footer --print-to-pdf=docs/student-guide.pdf file://$(pwd)/docs/student-guide.html"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "next": "^16.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"

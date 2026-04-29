@@ -1,5 +1,6 @@
 import { Oswald, Source_Sans_3, Source_Serif_4, JetBrains_Mono } from "next/font/google";
 import { Suspense } from "react";
+import { Analytics } from "@vercel/analytics/next";
 
 import "./globals.css";
 
@@ -66,6 +67,7 @@ export default async function RootLayout({ children }) {
           {children}
           <Footer />
         </CompareProvider>
+        <Analytics />
       </body>
     </html>
   );
